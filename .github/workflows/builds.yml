@@ -295,6 +295,16 @@ jobs:
           git cherry-pick 350fa762a4e5044a25ff4650fc85f7c9e6763f2b  # incusd/recover: Handle instances last
           git cherry-pick 37b42288f867d77ae2770a9eb69e0b3a9c35df4a  # shared/ioprogress: Support simple readers
           git cherry-pick 00ab5275b8e363b405553ea5d327c6999e6e88ae  # incusd/storage/btrfs: Report migration progress from receiver
+          git cherry-pick 26ea414cf2fcc70101d929cb42b180a77825de31  # incusd/instance/qemu: Set auto-converge on all migrations
+          git cherry-pick e134d99072870259ea7727e1eb8b2b70cafdfed4  # incusd/device/disk: Allow hotplug of disks on live-migratable VMs
+          git cherry-pick 19e428ced76907c21fd2eb19f8e34a848b09fa7e  # incusd/device/disk: Remove bad comment
+          git cherry-pick 356c6842d99b31a4da6083287ae579fe3b73bc64  # incusd/device/disk: Check for VM live-migration
+          git cherry-pick 72a06a4f33a0a693533f4a5799b4e1c1029501ab  # incusd/instance: Add ID to ConfigReader
+          git cherry-pick 6499313e75f4539123be2a9b8cead15022ea6140  # incusd/device/disk: Allow external disk live-migration
+          git cherry-pick 5c8e099216a96b4b5a08e70f932731091032f0a9  # incusd/storage/lvmcluster: Handle custom volumes
+          git cherry-pick 67777f96337938374fbc208d9fa9beed5e227346  # incusd/instance/qemu: Support live-migration of instances with extra disks
+          git cherry-pick 9322fd3103f1e80ed5bdac211835c503c65477f3  # incusd/network/ovn: Reconnect on timeout
+          git cherry-pick d9559fd8c47e0b6a274a4e82704f339c17bdf9dc  # incusd/network/ovs: Reconnect on timeout
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/cmd/incus
