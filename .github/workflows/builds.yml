@@ -305,6 +305,7 @@ jobs:
           git cherry-pick 67777f96337938374fbc208d9fa9beed5e227346  # incusd/instance/qemu: Support live-migration of instances with extra disks
           git cherry-pick 9322fd3103f1e80ed5bdac211835c503c65477f3  # incusd/network/ovn: Reconnect on timeout
           git cherry-pick d9559fd8c47e0b6a274a4e82704f339c17bdf9dc  # incusd/network/ovs: Reconnect on timeout
+          git cherry-pick 2926e5aa9b1a7074f6e0749d540a788c485c0697  # incusd/network/ovn: Handle chassis group having been deleted
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/cmd/incus
