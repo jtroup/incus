@@ -2,10 +2,11 @@
 
 Incus package builds provided by Zabbly.
 
-There are two repositories available:
+There are three repositories available:
 
-* stable (latest release of Incus)
-* daily (untested daily builds)
+* `lts-6.0` (Incus 6.0.x LTS)
+* `stable` (latest release of Incus)
+* `daily` (untested daily builds)
 
 ## Availability
 
@@ -44,6 +45,25 @@ If so, save the key locally:
 ```sh
 mkdir -p /etc/apt/keyrings/
 curl -fsSL https://pkgs.zabbly.com/key.asc -o /etc/apt/keyrings/zabbly.asc
+```
+
+### 6.0 LTS repository
+
+On any of the distributions above, you can add the package repository at `/etc/apt/sources.list.d/zabbly-incus-lts-6.0.sources`.
+
+Run the following command to add the 6.0 LTS repository:
+
+```sh
+sh -c 'cat <<EOF > /etc/apt/sources.list.d/zabbly-incus-lts-6.0.sources
+Enabled: yes
+Types: deb
+URIs: https://pkgs.zabbly.com/incus/lts-6.0
+Suites: $(. /etc/os-release && echo ${VERSION_CODENAME})
+Components: main
+Architectures: $(dpkg --print-architecture)
+Signed-By: /etc/apt/keyrings/zabbly.asc
+
+EOF'
 ```
 
 ### Stable repository
