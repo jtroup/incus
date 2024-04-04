@@ -21,7 +21,7 @@ Depends: ${misc:Depends},
   libusb-1.0-0,
   libusbredirparser1
 Pre-Depends: ${misc:Pre-Depends}
-Description: Incus -  Container and virtualization daemon (container-only)
+Description: Incus - Container and virtualization daemon (container-only)
  Incus provides the ability to run containers and virtual machines locally
  along with very flexible networking and storage akin to what's offered
  in a public cloud environment.
