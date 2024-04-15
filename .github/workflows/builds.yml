@@ -48,7 +48,7 @@ jobs:
       LXC_TAG: "v6.0.0"
       LXCFS_TAG: "v6.0.0"
       INCUS_TAG: "main"
-      INCUS_UI_CANONICAL_TAG: "0.7"
+      INCUS_UI_CANONICAL_TAG: "0.8"
       RAFT_TAG: "v0.22.1"
       COWSQL_TAG: "v1.15.6"
       CRIU_TAG: "v3.19"
@@ -330,7 +330,7 @@ jobs:
           git am "${REPO}/patches/ui-canonical-0005-Remove-Canonical-image-servers.patch"
           git am "${REPO}/patches/ui-canonical-0006-Remove-version-check.patch"
           git am "${REPO}/patches/ui-canonical-0007-Improve-openfga.patch"
-          sed -i -f "${REPO}/patches/ui-canonical-renames.sed" src/*/*.ts* src/*/*/*.ts* src/*/*/*/*.ts*
+          sed -i -f "${REPO}/patches/ui-canonical-renames.sed" src/*/*.ts* src/*/*/*.ts* src/*/*/*/*.ts* src/*/*/*/*/*.ts*
 
           npm install yarn --global
           yarn install
