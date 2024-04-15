@@ -1,7 +1,7 @@
-From 817df8d589407bbba6648890a77f6f9917b5241c Mon Sep 17 00:00:00 2001
+From 4a477c328eada5d3b3dfee39b6949dc97c36f813 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:02:27 +0000
-Subject: [PATCH 2/6] Update navigation
+Subject: [PATCH 2/8] Update navigation
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -14,7 +14,7 @@ Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
  3 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/src/components/Navigation.tsx b/src/components/Navigation.tsx
-index de10688..169957c 100644
+index 147676a..64a97d3 100644
 --- a/src/components/Navigation.tsx
 +++ b/src/components/Navigation.tsx
 @@ -261,7 +261,7 @@ const Navigation: FC = () => {
