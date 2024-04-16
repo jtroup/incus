@@ -182,7 +182,7 @@ jobs:
           git clone https://github.com/cowsql/raft /build/raft --depth 1 -b "${RAFT_TAG}"
           git clone https://github.com/cowsql/cowsql /build/cowsql --depth 1 -b "${COWSQL_TAG}"
           git clone https://github.com/lxc/lxc /build/lxc --depth 1 -b "${LXC_TAG}"
-          git clone https://github.com/lxc/lxcfs /build/lxcfs -b "${LXCFS_TAG}"
+          git clone https://github.com/lxc/lxcfs /build/lxcfs --depth 1 -b "${LXCFS_TAG}"
           git clone https://github.com/lxc/incus /build/incus -b "${INCUS_TAG}"
 
           git clone https://github.com/checkpoint-restore/criu /build/criu --depth 1 -b "${CRIU_TAG}"
@@ -267,7 +267,6 @@ jobs:
           REPO="${PWD}"
 
           cd /build/lxcfs
-
           meson setup build \
                   --prefix=/opt/incus \
                   --libdir=/opt/incus/lib \
