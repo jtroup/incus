@@ -288,6 +288,41 @@ jobs:
           REPO="${PWD}"
 
           cd /build/incus
+
+          git cherry-pick a95d743f47838fabda684614da6b68bff1cf8639  # doc/support: Update for LTS
+          git cherry-pick 61ab78a50a6e6268868fdef29f4bfbae5606e666  # incusd/network: Remove bridge.driver=native requirement for extended external_interfaces syntax
+          git cherry-pick de81e4c4d133ac6c9450880b6b51be5d5031f271  # doc/network/bridge: Update extended external_interfaces documentation
+          git cherry-pick a9099027dcaf30011d498ab2c0cf26215b864fbb  # incusd/storage/drivers/zfs: Simplify dataset receive and fix progress handling
+          git cherry-pick 3286709bf262fccfd2edb55b031a6586b58c4032  # gomod: Update dependencies
+          git cherry-pick bcd1cb44f32386fca73eb0465540eed51632788e  # mini-oidc: Merge into main gomod
+          git cherry-pick 5a0a7153a83bdd1a8e2c5d269336eedf8abe60f2  # gomod: Update dependencies
+          git cherry-pick bf519f9ab21adfc0e8778d9e03f1543767655582  # go.mod: Bump package major version
+          git cherry-pick 09dc3e60bce383602775724ace19744a32bd2293  # global: Update Go package to v6
+          git cherry-pick a927a34228d79e8dc2e7e3accb5bb3cfe0ea1510  # test: Update godeps.list
+          git cherry-pick cddd1ce2c4636f848ec886fbb1aa12548f02b415  # README: Update for godoc URLs
+          git cherry-pick 2a11892453451e99cee0f46565369b309e220678  # doc/rest-api: Refresh swagger YAML
+          git cherry-pick ab77b68ad0aadb66c4695e687e427e853858445a  # cmd/incus: Fix import ordering
+          git cherry-pick cabc48dd31b2f2983095b1549259481fbefb5677  # incusd: Remove unneeded import renames
+          git cherry-pick 3549527380763fe97eb06ed6b4f8c278bf8b4077  # incusd/instance: Fix duplicate import
+          git cherry-pick 2122c2212e96443c15d6a7b2074bbcf7ea494ac7  # doc/projects: Tweak examples
+          git cherry-pick 8f87dfde001ffc3d93de680c3f886a3bb13cd7fc  # shared/api: Remove container resources (deprecated)
+          git cherry-pick 6ad32b9aaedbb26e329a812707c5ee7d82625e48  # doc/rest-api: Refresh swagger YAML
+          git cherry-pick 5287fb55799b479fc0100a8a0687d7b4172458c8  # incus/create: Remove dead code
+          git cherry-pick 23aad8b7e3ebeeb05070512b890746db71f36e9c  # i18n: Update translation templates
+          git cherry-pick b321562aea69f3daaee52ff9664ea3220a802b03  # incusd/daemon: Remove old migration logic
+          git cherry-pick 859030aa96e7c4a0a765c7e97fd2b636542aa529  # incusd: Stop mentioning containers in resources
+          git cherry-pick ea723b7f05e6659c36fc560c3147b3a9d248ff24  # doc/rest-api: Use instances API in example
+          git cherry-pick 0e0b85e42861f61dcf8bbedbbdd69f676db69cda  # incusd/db/cluster: containers URLs aren't valid in Incus
+          git cherry-pick 6b3a2bf770de3db734d172cc4e827a4f1c009f34  # incusd/instances: Don't start instances when evacuated
+          git cherry-pick a7c76c251cb3416009d7ba4b6eda389130d5f995  # doc/installing: Sort source-build distro instructions
+          git cherry-pick 219643a9477fcb48aa39203fab808393e68e5bed  # doc/installing: Add OpenSUSE source instructions
+          git cherry-pick 195fbf27ce5f1f2d91906e973e79d4522a3193e0  # doc/installing: Add Alpine instructions
+          git cherry-pick 06949bf3468105e8500fabfc839662a9d29059dd  # incus/aliases: fix completion regression
+          git cherry-pick c46306c7dabc5f6e278205efdce6f60f73c4d8ba  # incus/snapshot: Fix deletion of snapshots containing colons
+          git cherry-pick 7772a02e74ac941b99bb61b6fb2392672d0e4575  # incusd/instance/drivers: Have SR-IOV get stable MACs
+          git cherry-pick 0ca4fb9ac9c1bb5a277f4afe3185507d54799275  # incusd/device/nic_sriov: Use stable MAC
+          git cherry-pick a2faa8c6e51032c8f29b8728999e9f4274fa06ff  # incusd/instance/lxc: Only apply soft cgroup limits on cgroup1
+
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
           go build -o "/opt/incus/bin/incus-benchmark" github.com/lxc/incus/v6/cmd/incus-benchmark
