@@ -18,6 +18,7 @@ jobs:
         os:
           - ubuntu-20.04
           - ubuntu-22.04
+          - ubuntu-24.04
           - debian-11
           - debian-12
         arch:
@@ -648,6 +649,7 @@ jobs:
           [ "${PKGOS}" = "debian-12" ] && CODENAME=bookworm
           [ "${PKGOS}" = "ubuntu-20.04" ] && CODENAME=focal
           [ "${PKGOS}" = "ubuntu-22.04" ] && CODENAME=jammy
+          [ "${PKGOS}" = "ubuntu-24.04" ] && CODENAME=noble
 
           mkdir -p pkg/ pkg/lib/systemd/ pkg/opt/ pkg/usr/bin/ pkg/usr/share/bash-completion/completions/
 
