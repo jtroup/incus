@@ -118,6 +118,7 @@ jobs:
             libspice-server-dev \
             libsqlite3-dev \
             libssl-dev \
+            libtirpc-dev \
             libtool \
             libudev-dev \
             libusb-1.0-0-dev \
