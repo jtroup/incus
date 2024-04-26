@@ -347,7 +347,7 @@ jobs:
       - name: Build CRIU
         run: |
           cd /build/criu
-          make
+          make WERROR=0
           cp criu/criu /opt/incus/bin/
 
       - name: Build libnvidia-container
