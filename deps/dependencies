@@ -10,6 +10,7 @@ GOLANG_TAG https://github.com/golang/go go1.21
 LIBTPMS_TAG https://github.com/stefanberger/libtpms v
 LIBURING_TAG https://github.com/axboe/liburing liburing-
 MINIO_TAG https://github.com/minio/minio RELEASE
+MINIO_MC_TAG https://github.com/minio/mc RELEASE
 NASM_TAG https://github.com/netwide-assembler/nasm nasm-
 NVIDIA_CONTAINER_TAG https://github.com/NVIDIA/libnvidia-container v
 QEMU_TAG https://gitlab.com/qemu-project/qemu v

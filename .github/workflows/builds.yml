@@ -58,6 +58,7 @@ jobs:
       LIBTPMS_TAG: "v0.9.6"
       LIBURING_TAG: "liburing-2.5"
       MINIO_TAG: "RELEASE.2024-04-18T19-09-19Z"
+      MINIO_MC_TAG: "RELEASE.Wed-Jun-24-21-56-09-GMT-2015"
       NASM_TAG: "nasm-2.16.03"
       NVIDIA_CONTAINER_TAG: "v1.15.0"
       QEMU_TAG: "v9.0.0"
@@ -191,6 +192,7 @@ jobs:
           git clone https://github.com/checkpoint-restore/criu /build/criu --depth 1 -b "${CRIU_TAG}"
           git clone https://github.com/NVIDIA/libnvidia-container /build/libnvidia-container --depth 1 -b "${NVIDIA_CONTAINER_TAG}"
           git clone https://github.com/minio/minio /build/minio --depth 1 -b "${MINIO_TAG}"
+          git clone https://github.com/minio/mc /build/mc --depth 1 -b "${MINIO_MC_TAG}"
 
           git clone https://gitlab.com/qemu-project/seabios /build/seabios --depth 1 -b "${SEABIOS_TAG}"
           git clone https://github.com/tianocore/edk2 /build/edk2 --recurse-submodules --shallow-submodules --depth 1 -b "${EDK2_TAG}"
@@ -368,6 +370,12 @@ jobs:
           cd /build/minio
           make build
           cp minio /opt/incus/bin/
+
+      - name: Build minio client
+        run: |
+          cd /build/mc
+          make build
+          cp mc /opt/incus/bin/
 
       - name: Build seabios
         if: ${{ matrix.arch == 'amd64' }}
