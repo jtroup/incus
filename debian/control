@@ -19,7 +19,7 @@ Depends: ${misc:Depends},
   libseccomp2,
   libspice-server1,
   libusb-1.0-0,
-  libusbredirparser1
+  libusbredirparser1 | libusbredirparser1t64
 Pre-Depends: ${misc:Pre-Depends}
 Description: Incus - Container and virtualization daemon (container-only)
  Incus provides the ability to run containers and virtual machines locally
@@ -42,7 +42,7 @@ Depends: ${misc:Depends},
   nftables | iptables,
   iw,
   libacl1,
-  libaio1,
+  libaio1 | libaio1t64,
   libapparmor1,
   libbsd0,
   libcap2,
@@ -58,7 +58,7 @@ Depends: ${misc:Depends},
   libselinux1,
   libsqlite3-0,
   libudev1,
-  libuv1,
+  libuv1 | libuv1t64,
   rsync,
   gdisk,
   squashfs-tools,
