@@ -326,6 +326,18 @@ jobs:
           git cherry-pick 7772a02e74ac941b99bb61b6fb2392672d0e4575  # incusd/instance/drivers: Have SR-IOV get stable MACs
           git cherry-pick 0ca4fb9ac9c1bb5a277f4afe3185507d54799275  # incusd/device/nic_sriov: Use stable MAC
           git cherry-pick a2faa8c6e51032c8f29b8728999e9f4274fa06ff  # incusd/instance/lxc: Only apply soft cgroup limits on cgroup1
+          git cherry-pick ef9a763f00b668ec28899fd37d581e9d5bf45ab6  # doc: Fix bad sphinx requirements
+          git cherry-pick 11efc004503eae03aed35f33e7834bb58f7bd805  # doc: Avoid MyST 3.0.0
+          git cherry-pick f7acfd818d3538c9908438bb92e64ec669dbd165  # incusd/loki: Use hostname as default instance property on standalone systems
+          git cherry-pick 08267a0eabf5492b607277165e75f786eb5233d0  # incusd/loki: Re-order config fields
+          git cherry-pick 7a77f39b2e62b21151da614e18df16e4e82ffcae  # incusd/loki: Allow overriding the location field
+          git cherry-pick b2f1f91b09e3c3d4b46673880a2044f8ff2e6e87  # incusd/loki: Set location field to local hostname on standalone systems
+          git cherry-pick 2e5f8a6ba359f641e71b6ea819db76a99052af9d  # Add missing SecureBoot firmware names
+          git cherry-pick e8afad812799a819473e80e1169909a6f9f75e12  # incusd/cgroup: Set hugepages reserved limits
+          git cherry-pick d4948b045d1f90daac3e8f48db492402c6ee0740  # incusd/storage/drivers: Introduce SparseFileWrapper
+          git cherry-pick b7025b3e9e1ee5e47228e57a4b11ca519743f892  # incusd/storage/drivers/vfs: Use SparseFileWrapper on backup import
+          git cherry-pick 5353b87c51129f521f504ec10d9117c99f944be6  # incusd/storage/drivers/vfs: Use SparseFileWrapper on volume migration
+          git cherry-pick d4ad3f1601b4d38553568ed631d950524232cc47  # incus/info: Sorting network interfaces
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
