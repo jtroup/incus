@@ -326,8 +326,8 @@ jobs:
           git cherry-pick 7772a02e74ac941b99bb61b6fb2392672d0e4575  # incusd/instance/drivers: Have SR-IOV get stable MACs
           git cherry-pick 0ca4fb9ac9c1bb5a277f4afe3185507d54799275  # incusd/device/nic_sriov: Use stable MAC
           git cherry-pick a2faa8c6e51032c8f29b8728999e9f4274fa06ff  # incusd/instance/lxc: Only apply soft cgroup limits on cgroup1
-          git cherry-pick ef9a763f00b668ec28899fd37d581e9d5bf45ab6  # doc: Fix bad sphinx requirements
           git cherry-pick 11efc004503eae03aed35f33e7834bb58f7bd805  # doc: Avoid MyST 3.0.0
+          git cherry-pick ef9a763f00b668ec28899fd37d581e9d5bf45ab6  # doc: Fix bad sphinx requirements
           git cherry-pick f7acfd818d3538c9908438bb92e64ec669dbd165  # incusd/loki: Use hostname as default instance property on standalone systems
           git cherry-pick 08267a0eabf5492b607277165e75f786eb5233d0  # incusd/loki: Re-order config fields
           git cherry-pick 7a77f39b2e62b21151da614e18df16e4e82ffcae  # incusd/loki: Allow overriding the location field
