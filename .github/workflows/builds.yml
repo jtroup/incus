@@ -293,6 +293,8 @@ jobs:
 
           cd /build/incus
 
+          git cherry-pick 2fe62a272e3819d0e31ef2a5f8ed5566d607814a  # incusd/instance/qemu: Fix StartedAt handling
+
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
           go build -o "/opt/incus/bin/incus-benchmark" github.com/lxc/incus/v6/cmd/incus-benchmark
