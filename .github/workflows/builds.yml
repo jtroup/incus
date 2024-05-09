@@ -294,6 +294,9 @@ jobs:
           cd /build/incus
 
           git cherry-pick 2fe62a272e3819d0e31ef2a5f8ed5566d607814a  # incusd/instance/qemu: Fix StartedAt handling
+          git cherry-pick 5e65146d517d20d1c036acf3eb1e70ff7656a71d  # incusd/network_zones: Fix listing of zones within a project
+          git cherry-pick f68e6bd9e6294315a686eaa59c386e704bfc87a6  # incusd/instance/lxc: Fix handling of migration.stateful
+          git cherry-pick 62e6cc691a6c9a2b7ecfe8dce75ba6084edd4c29  # incusd/network/ovs: Fix bad VLANMode value
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
