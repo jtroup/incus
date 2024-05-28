@@ -340,7 +340,6 @@ jobs:
           git cherry-pick d4ad3f1601b4d38553568ed631d950524232cc47  # incus/info: Sorting network interfaces
           git cherry-pick 0e9942147c62a275d80c4eb1cee60dbaeaa574bb  # incusd/instances/qemu: Tweak secureboot firmware list
           git cherry-pick 2a84aa00ddab35647636eeedbcf2dbd6c27577cc  # cmd/incus/admin_cluster: Add libexec path for incusd
-          git cherry-pick 61b5dafa8dcf74ffd5b601594b646c62a0209c40  # incus/storage: Show usage when no driver passed
           git cherry-pick 864f14f600511942452c122d28c5c5d6f35b721f  # incusd/storage/drivers/dir: Tweak path validation
           git cherry-pick d634c75638513f39a048691b4745961e35cc0624  # incusd/backup: Show profile list on lookup error
           git cherry-pick 8092e2741cdec6a4853544cbe0ca3a6fecbf171f  # incusd/apparmor/lxc: Allow access to binfmt_misc
