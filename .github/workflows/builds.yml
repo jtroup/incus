@@ -338,6 +338,34 @@ jobs:
           git cherry-pick b7025b3e9e1ee5e47228e57a4b11ca519743f892  # incusd/storage/drivers/vfs: Use SparseFileWrapper on backup import
           git cherry-pick 5353b87c51129f521f504ec10d9117c99f944be6  # incusd/storage/drivers/vfs: Use SparseFileWrapper on volume migration
           git cherry-pick d4ad3f1601b4d38553568ed631d950524232cc47  # incus/info: Sorting network interfaces
+          git cherry-pick 0e9942147c62a275d80c4eb1cee60dbaeaa574bb  # incusd/instances/qemu: Tweak secureboot firmware list
+          git cherry-pick 2a84aa00ddab35647636eeedbcf2dbd6c27577cc  # cmd/incus/admin_cluster: Add libexec path for incusd
+          git cherry-pick 61b5dafa8dcf74ffd5b601594b646c62a0209c40  # incus/storage: Show usage when no driver passed
+          git cherry-pick 864f14f600511942452c122d28c5c5d6f35b721f  # incusd/storage/drivers/dir: Tweak path validation
+          git cherry-pick d634c75638513f39a048691b4745961e35cc0624  # incusd/backup: Show profile list on lookup error
+          git cherry-pick 8092e2741cdec6a4853544cbe0ca3a6fecbf171f  # incusd/apparmor/lxc: Allow access to binfmt_misc
+          git cherry-pick ff1290c627dca42f4c0538453ef60b610be0ee6e  # incusd/apparmor/lxc: Refresh generated rules
+          git cherry-pick c50747f6173048d36d4311f99ede7fde0cf21d53  # incusd/storage: Handle instance volume size on import
+          git cherry-pick 9c10d67f22154e6335b00c278dc305cd1f566d7a  # incusd/apparmor/lxc: Fix access to kernel/security/apparmor
+          git cherry-pick 8b3818cc3d0a4236d01743e77a117acc6388cc4c  # shared/archive: Fix typo
+          git cherry-pick 2f1847220480055bf9bae103bca5c40e60fe7b1c  # incusd/cluster: Re-organize joining logic
+          git cherry-pick 88e463a8c341e502e15149c473d50334f2a95691  # incusd/cluster: Ignore OVN networks during joining
+          git cherry-pick 11887d924b3bd933fa1f32c7fd6b0502cc202873  # shared/archive: Properly anchor exclude rules
+          git cherry-pick a64b420971ba37fa10e3e1414e87bf3b77004808  # incusd/project: Rework low-level permission checks
+          git cherry-pick d07606879728f8030b01365f34b9f860dd2231bb  # incusd/instance/qemu: Allow setting protection.delete when running
+          git cherry-pick cb07cb6d4d3ca7b350ba9853fc8b6c2c4c58f2db  # incusd/instance/agent-loader: Support installing to /etc
+          git cherry-pick d2c13e3f6312f08750981a80a510530e881c4ec7  # incusd/apparmor/lxc: Fix rule syntax
+          git cherry-pick ec223f75e7056f271fb84be56980243cd68e67b3  # shared/idmap: Make get_userns_fd configure the userns
+          git cherry-pick 6b918e21e4f61959a909860ffaf05b956bcccd21  # incus-migrate: Handle valid CA certificates
+          git cherry-pick d70dfab9b9e4617dfbaf128debad923c32d19853  # incusd/instances_post: Fix migrating into remote cluster
+          git cherry-pick 6fb4e5ad19a62dbb1bca4ca7516dce6b00f46e6e  # incusd/apparmor: Detect nosymfollow support
+          git cherry-pick 412a33ac9808a73ad9c5acfd648f510d5519c2de  # incusd: Set SELinux label on socket
+          git cherry-pick 197edb14159b2b62cd48b1ee07ab80109d2aa2f3  # incus/network: Align attach-profile with attach
+          git cherry-pick 1b7da9480e2ec1d564e54ee4be8628204fcb9f7f  # create_detached_idmapped_mount: avoid double close
+          git cherry-pick 041a4ada55642e91ae5cbb4b86d868abc3a32306  # incusd/instance/qemu: Extend missing QEMU error
+          git cherry-pick 91fd3245c098953fabd2aca5db524655254bbb93  # doc/installing: Mention extra packages for VMs
+          git cherry-pick b6a9da9265615e97c9d375b9be33943465992fcb  # incusd/storage/btrfs: Fix btrfs argument order
+          git cherry-pick dea0b4c0fed9b4c4541acaddfa2bc3869cc55d19  # incusd/seccomp/sysinfo: Handle 32bit on 64bit
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
