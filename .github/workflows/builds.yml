@@ -147,7 +147,11 @@ jobs:
       - name: Install backporter debhelper (on focal)
         if: ${{ matrix.os == 'ubuntu-20.04' }}
         run: |
-          echo "deb http://archive.ubuntu.com/ubuntu focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
+          if [ "${OS_ARCH}" = "amd64" ]; then
+              echo "deb http://archive.ubuntu.com/ubuntu focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
+          else
+              echo "deb http://ports.ubuntu.com/ubuntu-ports focal-backports main restricted universe multiverse" >> /etc/apt/sources.list
+          fi
           apt-get install -t focal-backports debhelper --yes
 
       - name: Install Go
