@@ -53,7 +53,7 @@ jobs:
       RAFT_TAG: "v0.22.1"
       COWSQL_TAG: "v1.15.6"
       CRIU_TAG: "v3.19"
-      EDK2_TAG: "edk2-stable202405"
+      EDK2_TAG: "edk2-stable202402"
       GOLANG_TAG: "go1.21.10"
       LIBTPMS_TAG: "v0.9.6"
       LIBURING_TAG: "liburing-2.6"
