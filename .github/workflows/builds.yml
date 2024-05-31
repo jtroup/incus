@@ -46,7 +46,7 @@ jobs:
       PATH: "/opt/incus/bin:/root/.cargo/bin:/usr/local/go/bin:/usr/local/node/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
       LXC_TAG: "v6.0.0"
       LXCFS_TAG: "v6.0.0"
-      INCUS_TAG: "v6.1.0"
+      INCUS_TAG: "v6.2.0"
       INCUS_UI_CANONICAL_TAG: "0.8.1"
       RAFT_TAG: "v0.22.1"
       COWSQL_TAG: "v1.15.6"
@@ -303,28 +303,6 @@ jobs:
           REPO="${PWD}"
 
           cd /build/incus
-
-          git cherry-pick 2fe62a272e3819d0e31ef2a5f8ed5566d607814a  # incusd/instance/qemu: Fix StartedAt handling
-          git cherry-pick 5e65146d517d20d1c036acf3eb1e70ff7656a71d  # incusd/network_zones: Fix listing of zones within a project
-          git cherry-pick f68e6bd9e6294315a686eaa59c386e704bfc87a6  # incusd/instance/lxc: Fix handling of migration.stateful
-          git cherry-pick 62e6cc691a6c9a2b7ecfe8dce75ba6084edd4c29  # incusd/network/ovs: Fix bad VLANMode value
-          git cherry-pick 0ffc6c151496689ff97bedb28da4e99b416e8497  # fix: close resources
-          git cherry-pick 9c733bccf04e717b6497534d616e83f5e947304a  # incusd/instance: Fix building on 32bit architectures
-          git cherry-pick 97f28d6e58971a50a69f8e31de640eccae88ac2a  # cmd/incus/info: Fix runtime error when chassis, motherboard and firwmare information is not available
-          git cherry-pick d07606879728f8030b01365f34b9f860dd2231bb  # incusd/instance/qemu: Allow setting protection.delete when running
-          git cherry-pick cb07cb6d4d3ca7b350ba9853fc8b6c2c4c58f2db  # incusd/instance/agent-loader: Support installing to /etc
-          git cherry-pick d2c13e3f6312f08750981a80a510530e881c4ec7  # incusd/apparmor/lxc: Fix rule syntax
-          git cherry-pick ec223f75e7056f271fb84be56980243cd68e67b3  # shared/idmap: Make get_userns_fd configure the userns
-          git cherry-pick 6b918e21e4f61959a909860ffaf05b956bcccd21  # incus-migrate: Handle valid CA certificates
-          git cherry-pick d70dfab9b9e4617dfbaf128debad923c32d19853  # incusd/instances_post: Fix migrating into remote cluster
-          git cherry-pick 6fb4e5ad19a62dbb1bca4ca7516dce6b00f46e6e  # incusd/apparmor: Detect nosymfollow support
-          git cherry-pick 412a33ac9808a73ad9c5acfd648f510d5519c2de  # incusd: Set SELinux label on socket
-          git cherry-pick 197edb14159b2b62cd48b1ee07ab80109d2aa2f3  # incus/network: Align attach-profile with attach
-          git cherry-pick 1b7da9480e2ec1d564e54ee4be8628204fcb9f7f  # create_detached_idmapped_mount: avoid double close
-          git cherry-pick 041a4ada55642e91ae5cbb4b86d868abc3a32306  # incusd/instance/qemu: Extend missing QEMU error
-          git cherry-pick 91fd3245c098953fabd2aca5db524655254bbb93  # doc/installing: Mention extra packages for VMs
-          git cherry-pick b6a9da9265615e97c9d375b9be33943465992fcb  # incusd/storage/btrfs: Fix btrfs argument order
-          git cherry-pick dea0b4c0fed9b4c4541acaddfa2bc3869cc55d19  # incusd/seccomp/sysinfo: Handle 32bit on 64bit
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
