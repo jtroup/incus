@@ -304,6 +304,58 @@ jobs:
 
           cd /build/incus
 
+          git cherry-pick a6b2fd32eae45ccb4ee4cc002ff66d6c30aeacab  # incus/project: Fix bad --show-access output
+          git cherry-pick 2e9085648dacfdf2b368694c79bf883171e25d2d  # cmd/incus-user: Avoid double user-user- in network description
+          git cherry-pick 3055a1fd4f8e210a2fd89a853e5af0da492be06b  # Translated using Weblate (German)
+          git cherry-pick 025620b324b3035434f64e3763024e01d2736616  # Translated using Weblate (Japanese)
+          git cherry-pick 2b8dceb35cfd425370eba4967af2161975848b16  # incus/admin_sql: Fix description
+          git cherry-pick b36a74444095d9560043685e9c6376dfd3dbf590  # incus/storage_bucket: Fix string quoting
+          git cherry-pick 8b5c6418ac367dc1095bb50ede2638d97a0b29da  # incus/profile: Fix examples
+          git cherry-pick f4d12a555e577e1f73e148bb1d0f8694f3001874  # incus/project: Fix examples
+          git cherry-pick 2904c6530605ac6f280d2207eee91a2c5365c1a8  # incus/snapshot: Improve restore example
+          git cherry-pick 6085c1f937f910e1bbaf70b840b8449fa84cabfd  # incus/storage_bucket: Fix typoes in examples
+          git cherry-pick 6529c9cc5032e96e39c16560358e7c54b2efec7b  # incus/storage_bucket: Fix export example
+          git cherry-pick 76bf6a180479594a34184aeb00fb32c3fea98314  # incus/exec: Add some examples
+          git cherry-pick 6b987b148d0107779e4c03dc6fa6f7dd03e0f4f0  # i18n: Update translation templates
+          git cherry-pick d6efc8c729aa8b0a9bc7bc67d7b4c335ae105638  # incus-user: Don't needlessly update the default profile
+          git cherry-pick c99882c9ca4416d854fa1e608c1b150657bb20dc  # incus/top: Support remote servers
+          git cherry-pick d9c2ea713c6a7bde0688fad7cd56a28cd25d2fde  # incus/top: Properly handle projects
+          git cherry-pick 00f207e084c767862f412b8ec3176458b449698f  # incus/top: Handle clusters
+          git cherry-pick 753f1b202231086ec3f1f391af41277bc79bdcad  # incusd/instance/qemu: Avoid endianness issues with vsockIDInt
+          git cherry-pick 4220910b7fbabbdf836fa10f3a300d6959217806  # internal/linux: Define some IOCTLs
+          git cherry-pick f3f18d80e8f037754f2eb3658b6394aec013bda9  # incusd/instance/qemu: Don't use hardcoded ioctl
+          git cherry-pick 58d21750f64965415af8ceb526f9b2b0e5cce04e  # incusd/storage/btrfs: Don't use hardcoded ioctl
+          git cherry-pick 870014c4f2d7bc4748fc1adf1defa1cc61c4e310  # incusd/devices: Simplify ioctl logic
+          git cherry-pick 00089be93c011e07ee6a896dcae8190c2b959f37  # shared/cliconfig: Remove old migration logic
+          git cherry-pick 6518c164a668c50bffe7222fdde1afe28deb976e  # shared/cliconfig: Generalize logic
+          git cherry-pick f11c0b04f2e90a19e900ca077e21edf02c589db2  # incusd/seccomp: Fix sysinfo logic on 32bit platforms
+          git cherry-pick d4fa1b228ebfb534c484d586b7df0abf4306705f  # shared/cliconfig: Always fill in the protocol
+          git cherry-pick 507c0c9a30d1a62c2e43a701974390932787429e  # incus: Generalize image server logic
+          git cherry-pick b53278935572393fad887191a765ef4a7df7d8b4  # incus/console: Re-shuffle logic a bit
+          git cherry-pick 2c78a5e29654280d6bf5bd128ef034d2407821cd  # incus: Handle stopped containers in --console
+          git cherry-pick 539e10d511fbc0da4f56e84000508c54d09d5006  # incus/console: Don't export an internal function
+          git cherry-pick 928018633c68df20999becbac87c6faa07c8de54  # doc: update documentation for forming cluster with existing server
+          git cherry-pick 8d82dc0885865bca3ba001f1414313a6f5b7cac7  # github: Cleanup workflow file
+          git cherry-pick 03fe4ab50308f29bf3eb105e9169b92b90d26d6d  # github: Build go tip
+          git cherry-pick 24af5cbb365cdee1855c11bc1ae6c6f7b37470c8  # github: Change Go releases in tests
+          git cherry-pick bba0b8fe1a1336a64729646ab2f4ac54aea3446d  # test/lint/golangci: Properly pull the parent ref
+          git cherry-pick 2a4739bb28c4d51aaf6e33d6f063eaee9d3ab3c7  # cmd/incusd: Fix typo in forknet
+          git cherry-pick 9b018f45cc2ca9b9a0e06e9678fb12642dd19142  # doc/instances_console: Tweak wording on SPICE clients
+          git cherry-pick e99041b56970fe82c1baffc10ee5b743bb203f98  # incus/network_load_balancer: Fix example
+          git cherry-pick 9b1e06e187f3957ccd9be5331bf46f317774833b  # i18n: Update translation templates
+          git cherry-pick ad48ae8201a8344852801c496ab6d858b7c116a1  # incusd/networks: Properly finalize OVN networks
+          git cherry-pick 3e54ea483139130bf82c557d5293f17bfcc400c7  # incusd/networks: Properly record description
+          git cherry-pick d04a23a2e3b4fda7d7002abbf0717901d5bb3a90  # incusd/response: Add Code function
+          git cherry-pick 6ceb2b9858297ed787c93d4e1ae4cfcd5742d649  # incusd/operations: Implement Code function
+          git cherry-pick 359600b5c6bcfe21f0861471b6552f19e1f351d4  # incusd: Implement Code function
+          git cherry-pick fd6b88c4b80717c8accce9910ff6350cdd842ef8  # incus-agent: Implement Code function
+          git cherry-pick 47aa4068f876425a6611c9d947d77ab10f9217b0  # client: Fix OIDC re-authentication on POST
+          git cherry-pick 50728bdff3575e97470a2252d3596dc71ccdc1c4  # client: Fix OIDC re-authentication on websocket
+          git cherry-pick dd9a9e06239a8de41f389249c094e9362d373389  # incus/network: Add missing stdin handling
+          git cherry-pick fd8f34adf4de250cfb82029cf6ab08ccb7c7553b  # i18n: Update translation templates
+          git cherry-pick 9d4d83dd286b336e63af99a1a541af8f4dc6f62b  # lxd-to-incus: Handle volume config keys
+          git cherry-pick 50e623c0b29f40b6ca02cfc2bef98884f5a1b408  # incusd/project: Don't fail creation on authorizer
+
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
           go build -o "/opt/incus/bin/incus-benchmark" github.com/lxc/incus/v6/cmd/incus-benchmark
