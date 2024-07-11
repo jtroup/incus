@@ -101,13 +101,16 @@ jobs:
             libacl1-dev \
             libaio-dev \
             libapparmor-dev \
+            libbtrfs-dev \
             libcap-dev \
             libcap-ng-dev \
             libdbus-1-dev \
+            libdevmapper-dev \
             libelf-dev \
             libfuse3-dev \
             libglib2.0-dev \
             libgnutls28-dev \
+            libgpgme-dev \
             libjson-glib-dev \
             libnet1-dev \
             libnl-3-dev \
