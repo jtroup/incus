@@ -63,7 +63,9 @@ jobs:
       NVIDIA_CONTAINER_TAG: "v1.15.0"
       QEMU_TAG: "v9.0.1"
       SEABIOS_TAG: "rel-1.16.3"
+      SKOPEO_TAG: "v1.14.4"
       SWTPM_TAG: "v0.9.0"
+      UMOCI_TAG: "v0.4.7"
       VIRTIOFSD_TAG: "v1.11.0"
     steps:
       - name: Checkout code
@@ -200,6 +202,9 @@ jobs:
           git clone https://github.com/lxc/lxc /build/lxc --depth 1 -b "${LXC_TAG}"
           git clone https://github.com/lxc/lxcfs /build/lxcfs --depth 1 -b "${LXCFS_TAG}"
           git clone https://github.com/lxc/incus /build/incus -b "${INCUS_TAG}"
+
+          git clone https://github.com/opencontainers/umoci /build/umoci --depth 1 -b "${UMOCI_TAG}"
+          git clone https://github.com/containers/skopeo /build/skopeo --depth 1 -b "${SKOPEO_TAG}"
 
           git clone https://github.com/checkpoint-restore/criu /build/criu --depth 1 -b "${CRIU_TAG}"
           git clone https://github.com/NVIDIA/libnvidia-container /build/libnvidia-container --depth 1 -b "${NVIDIA_CONTAINER_TAG}"
@@ -524,6 +529,16 @@ jobs:
           cd /build/virtiofsd
           cargo build --release
           cp target/release/virtiofsd /opt/incus/bin/
+
+      - name: Build umoci
+        run: |
+          cd /build/umoci
+          go build -o "/opt/incus/bin/umoci" github.com/opencontainers/umoci/cmd/umoci
+
+      - name: Build skopeo
+        run: |
+          cd /build/skopeo
+          go build -o "/opt/incus/bin/skopeo" github.com/containers/skopeo/cmd/skopeo
 
       - name: Build QEMU
         run: |
