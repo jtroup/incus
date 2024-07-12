@@ -312,6 +312,8 @@ jobs:
 
           cd /build/incus
 
+          git cherry-pick 6eb6f74b57f77d321c332f25f97d72ea29c71ebe  # incus-simplestreams: Fix split images
+
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
           go build -o "/opt/incus/bin/incus-benchmark" github.com/lxc/incus/v6/cmd/incus-benchmark
