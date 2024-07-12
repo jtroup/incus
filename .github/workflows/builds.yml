@@ -646,7 +646,6 @@ jobs:
           mv pkg/opt/incus/lib/systemd/system pkg/lib/systemd/system
           ln -s /opt/incus/share/bash_completion.d/incus pkg/usr/share/bash-completion/completions/incus
 
-          ln -s /opt/incus/bin/incus pkg/usr/bin/incus
           ln -s /opt/incus/bin/lxd-to-incus pkg/usr/bin/lxd-to-incus
 
           ln -s /opt/incus/bin/fuidshift pkg/usr/bin/fuidshift
