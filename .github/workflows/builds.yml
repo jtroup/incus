@@ -313,6 +313,7 @@ jobs:
           cd /build/incus
 
           git cherry-pick 6eb6f74b57f77d321c332f25f97d72ea29c71ebe  # incus-simplestreams: Fix split images
+          git cherry-pick cc33d436d193f12a38818482c050fafd1ecae04c  # incusd/instance/edk2: Support OVMF filenames on arm64
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
