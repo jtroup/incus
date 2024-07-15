@@ -9,12 +9,14 @@ case "$1" in
             systemctl disable --now incus-user.service incus-user.socket
             systemctl disable --now incus.service incus.socket
             systemctl disable --now incus-lxcfs.service
-        else
+        elif command -v systemctl >/dev/null 2>&1; then
             # On non-running systems, just disable the units.
             systemctl disable incus-startup.service
             systemctl disable incus-user.service incus-user.socket
             systemctl disable incus.service incus.socket
             systemctl disable incus-lxcfs.service
+        else
+            echo "Skipping systemd unit disabling as systemd couldn't be found"
         fi
     ;;
 
