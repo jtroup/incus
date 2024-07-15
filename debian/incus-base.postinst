@@ -85,12 +85,18 @@ if [ "$1" = "configure" ]; then
         # if systemctl is-active incus-lxcfs.service -q; then
         #     systemctl reload incus-lxcfs.service
         # fi
-    else
+    elif command -v systemctl >/dev/null 2>&1; then
         # On non-running systems, just enable the units.
         systemctl enable incus-lxcfs.service
         systemctl enable incus.socket
         systemctl enable incus-user.socket
         systemctl enable incus-startup.service
+    else
+        echo ""
+        echo "WARNING: systemd wasn't found on this system"
+        echo "As a result, the incus units have not been enabled."
+        echo "The Zabbly Incus packages are only tested and supported on systemd systems."
+        echo ""
     fi
 fi
 
