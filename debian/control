@@ -33,8 +33,6 @@ Description: Incus - Container and virtualization daemon
 
 Package: incus-base
 Architecture: linux-any
-Breaks: incus-tools
-Replaces: incus-tools
 Depends: ${misc:Depends},
   apparmor,
   attr,
@@ -75,8 +73,8 @@ Suggests:
   lvm2,
   zfsutils-linux | openzfs-zfsutils
 Pre-Depends: ${misc:Pre-Depends}
-Breaks: incus (<< ${source:Version})
-Replaces: incus (<< ${source:Version})
+Breaks: incus (<< ${source:Version}), incus-tools
+Replaces: incus (<< ${source:Version}), incus-tools
 Description: Incus - Container and virtualization daemon (container-only)
  Incus provides the ability to run containers and virtual machines locally
  along with very flexible networking and storage akin to what's offered
