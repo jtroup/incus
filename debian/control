@@ -33,8 +33,6 @@ Description: Incus - Container and virtualization daemon
 
 Package: incus-base
 Architecture: linux-any
-Breaks: incus-tools
-Replaces: incus-tools
 Depends: ${misc:Depends},
   apparmor,
   attr,
