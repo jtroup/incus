@@ -316,6 +316,9 @@ jobs:
           git cherry-pick cc33d436d193f12a38818482c050fafd1ecae04c  # incusd/instance/edk2: Support OVMF filenames on arm64
           git cherry-pick ee24c49a275268f08f9dd060fba1256699fee65e  # incusd/instance/drivers/qemu: Limit CPU flag calculation to x86_64
           git cherry-pick a68ebef36cdada61bd5ece7e15c82ee449214e9f  # incusd/instance/qemu: Fix architecture check being backward
+          git cherry-pick 5c01e21a85fa67fcf91ea0b9f5f0125a4ef177c9  # client/oci: Add errors for missing umoci
+          git cherry-pick 987bd27c20b4c8dd9575aa2254c865847fd73026  # client/oci: Add errors for missing skopeo
+          git cherry-pick 091a87835262b512c42283dc9afa3f4c5b0413e3  # incusd/instance: Fix initial configuration handling for OCI
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
