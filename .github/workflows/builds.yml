@@ -319,6 +319,10 @@ jobs:
           git cherry-pick 5c01e21a85fa67fcf91ea0b9f5f0125a4ef177c9  # client/oci: Add errors for missing umoci
           git cherry-pick 987bd27c20b4c8dd9575aa2254c865847fd73026  # client/oci: Add errors for missing skopeo
           git cherry-pick 091a87835262b512c42283dc9afa3f4c5b0413e3  # incusd/instance: Fix initial configuration handling for OCI
+          git cherry-pick 5d8b9c88a61719855b3901781ac9ef8ac8901d42  # incusd/instance/lxc: Handle OCI containers using real PID1
+          git cherry-pick 56e6c1a40c7941f5069edccd050e4c137a4fef51  # incusd/apparmor/qemu: Relax apparmor rules a bit
+          git cherry-pick 3381b08187a9e54b23fff20bdd4be2901cff46cb  # incus-simplestreams: Handle removal of combined images
+          git cherry-pick acb84c6fb1621c6dc2d16b13f2d86898b787d475  # incusd/instance/lxc: Add basic Mounts handling for OCI
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
