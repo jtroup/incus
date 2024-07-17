@@ -67,10 +67,12 @@ if [ "$1" = "configure" ]; then
     # Apply systemd units (done after systemd-sysusers has run).
     if [ -d /run/systemd/system ]; then
         # On running systems, enable and start the units.
-        systemctl enable incus-lxcfs.service --now
-        systemctl enable incus.socket --now
-        systemctl enable incus-user.socket --now
-        systemctl enable incus-startup.service --now
+        for unit in incus-lxcfs.service incus.socket incus-user.socket incus-startup.service; do
+            STATE="$(systemctl is-enabled "${unit}" || true)"
+            [ "${STATE}" = "masked" ] && continue
+
+            systemctl enable "${unit}" --now
+        done
 
         # Restart or reload anything that's currently running.
         if systemctl is-active incus.service -q; then
