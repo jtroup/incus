@@ -323,6 +323,7 @@ jobs:
           git cherry-pick 56e6c1a40c7941f5069edccd050e4c137a4fef51  # incusd/apparmor/qemu: Relax apparmor rules a bit
           git cherry-pick 3381b08187a9e54b23fff20bdd4be2901cff46cb  # incus-simplestreams: Handle removal of combined images
           git cherry-pick acb84c6fb1621c6dc2d16b13f2d86898b787d475  # incusd/instance/lxc: Add basic Mounts handling for OCI
+          git cherry-pick ce178160f281aaef0c75125ff02a4dd66cdb128b  # incusd/apparmor/qemu: Fix typo in rule
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
