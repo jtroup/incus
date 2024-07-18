@@ -304,6 +304,31 @@ jobs:
 
           cd /build/incus
 
+          git cherry-pick 2f8a458852ce60cb4beeea0c02ff3d621610740c  # incus/storage_volume: Tweak help messages
+          git cherry-pick e770a71f77496e96b0315dc149c9ff20cab48259  # i18n: Update translation templates
+          git cherry-pick ddba6bce28fa361327b3a4af294e82e6bcc21508  # incus/storage_volume: Fix lint
+          git cherry-pick d90014dcc9b3804241b64add16365f137f240110  # doc/installing: Mention incus-tools package
+          git cherry-pick 579ee11e8fb791e561338b8bc8b19c6680090557  # incusd/apparmor: Allow devpts mounts
+          git cherry-pick db3931780d6406de5d6c1f500965a91bd4a618c0  # incusd: Improve profile rename errors
+          git cherry-pick 47df62388b5a81f8bcb80fe6d7468647dbfd9b2f  # incus-user: Use shorter interrface name for long UIDs
+          git cherry-pick cc38d4ff6ad28478ae4dfc25717050eda576b2f5  # incusd/device/network: Fix Tap interface MTU when in OVN
+          git cherry-pick bde005e4f5db0e52b14b254ebeba14fbd20caef9  # incusd/isntance: Don't expose all internal flags in INFO message
+          git cherry-pick c1f4f32d7131e60e3c810da36e80d9da4716766f  # incusd/storage/lvmcluster: Don't allow buckets
+          git cherry-pick 3a0c698df5b9cac8caf417c070e43638a63cf5de  # incusd/storage/lvmcluster: Don't exclusively lock ISO volumes
+          git cherry-pick 5941015bcd88986146e6e3535b940045992b9702  # incusd/device/disk: Allow attaching the same ISO to multiple instances
+          git cherry-pick 15e6e522c764302ef6b46a36ba2bc047fa3c706e  # incusd/device/disk: Allow live-migration with agent/cloud-init disks
+          git cherry-pick 95fb17cd3c1abffce0e8a89ae0048d2e9364cf9d  # incusd/instance/qemu: Fix live-migration with agent/cloud-init disks
+          git cherry-pick f3caa114abdcbd60015dbb7329c3b6da9bd190a3  # incusd/device/disk: Don't crash on uninitialized pool
+          git cherry-pick 664ce7cfce3fedc0a6cc00c3272639fd1e9b4892  # incusd/storage/lvmcluster: Always use shared access
+          git cherry-pick b83b35399c089bffc91261eb43774eb44d9d6778  # incusd/instance/lxc: Don't report filesystem metrics when no per-instance value
+          git cherry-pick 471c0de3b90f4afa8fed6cf1bb760f83eb539ea1  # incus/top: Set interval to 10s (minimum server-side is 8)
+          git cherry-pick 2762921e22bcb2666498bcce30cf78568458ba8f  # incus/top: Hide zero values
+          git cherry-pick 698aa57fd8996ff47b0d281024a9955c99449315  # incusd/device/disk: Mark virtual disks as always migratable
+          git cherry-pick ca64aa1c64fe484488041874ef700d5a8aca8960  # tests: Update metrics test for recent change
+          git cherry-pick e5179c23c8e6696832424a7d94a4f988b78592ba  # doc/storage_backup: Fix command example
+          git cherry-pick c19644c610c0a451477bc7308b29ebd66a8a55d9  # incusd/apparmor/qemu: Relax apparmor rules a bit
+          git cherry-pick d33cf8693dc7c6971760888986edad286cc9cb0a  # incusd/apparmor/qemu: Fix typo in rule
+
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
           go build -o "/opt/incus/bin/incus-benchmark" github.com/lxc/incus/v6/cmd/incus-benchmark
