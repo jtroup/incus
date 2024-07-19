@@ -304,6 +304,75 @@ jobs:
 
           cd /build/incus
 
+          git cherry-pick 3512d3770529c4b8f201d715b5111d37783058f7  # incusd/network/ovn: Port CreateLogicalRouterRoute to libovsdb
+          git cherry-pick 9f57273a6a22cf4b3ce0a2c0cf8f365acfd27290  # incusd/network/ovn: Port DeleteLogicalRouterRoute to libovsdb
+          git cherry-pick 46b9df75921cb83748b98903debe2a1fcdc7553c  # incusd/network: Update for OVN function changes
+          git cherry-pick e99292988883f0936677760d61dde10aeee772b1  # incusd/network/ovn: Port DeleteLogicalRouterPort to libovsdb
+          git cherry-pick 4c03093e8fea6db4a457f76a6a10e9a7e18369fe  # incusd/network/ovn: Remove LogicalRouterPortDeleteIPv6Advertisements
+          git cherry-pick c5dc10b04c02f6c5af50f0b83dbd138669095988  # incusd/network: Update for OVN function changes
+          git cherry-pick 7145515b9029a82f9991bc1c5874ca3294e62890  # incusd/network/ovn: Port DeleteLogicalSwitch to libovsdb
+          git cherry-pick b44fc09354356720b7bb674af231a75923840b73  # incusd/network: Update for OVN function changes
+          git cherry-pick 03f563b9c9b1dbfa64beb4f4221f405db46bbd67  # incusd/network/ovn: Remove logicalSwitchFindAssociatedPortGroups
+          git cherry-pick a5cba6a6ec5d2c8bfdfd0a8a51e850f7ac3ef490  # incusd/network/ovn: Special handling for Load Balancer table
+          git cherry-pick 3ff7d11fa77161e84179b63689f384047b1caa92  # incusd/network/ovn: Align functions context handling
+          git cherry-pick 6c2d981e2b260ab5d548c48748b07da98062bc4c  # incusd/network/ovn: Port DeleteLogicalSwitchDHCPOption to libovsdb
+          git cherry-pick 550851bf4a12df05da5963fdb113ba7873df854f  # incusd/network/ovn: Port GetLogicalSwitchPortLocation to libovsdb
+          git cherry-pick d37e47ae3cba8458629e8eaa33ba90f5219e813c  # incusd/network/ovn: Port GetLogicalSwitchPortUUID to libovsdb
+          git cherry-pick 8f9cdbc2f4e0e0c4eadf1228b540f3b9614422d3  # incusd/network/ovn: Port GetLogicalRouterPortHardwareAddress to libovsdb
+          git cherry-pick 0e625d43d93bf33542a7467e4492583d100cec12  # incusd/network/ovn: Add GetLogicalRouter
+          git cherry-pick 743a85bcfccde4559844171485bda649de0ca137  # incusd/network/ovn: Port DeleteLoadBalancer to libovsdb
+          git cherry-pick 4ad5982aceba9347725b3a62a744f839c3d6cc02  # incusd/network/acl: Update for OVN function changes
+          git cherry-pick ab0e1924dbf4c968a19d134070777fc6561e19c0  # incusd/network: Update for OVN function changes
+          git cherry-pick a5f28375e5843b95e420e188389d7a13dc5c571c  # incusd/network: Simplify OVN network deletion logic
+          git cherry-pick 77c4e09836700146a13417b3dceff2a282d9bfe5  # incusd/network/ovn: Port UpdateLogicalSwitchIPAllocation to libovsdb
+          git cherry-pick 8519da027c2cc6275e1fbfa1c24cbde3f0ab3d6d  # incusd/network/ovn: Port UpdateLogicalSwitchDHCPv4Revervations to libovsdb
+          git cherry-pick 2947b57c2465db2d31ac92701291cbd76f161b81  # incusd/network/ovn: Port GetLogicalSwitchDHCPv4Revervations to libovsdb
+          git cherry-pick 696256fd434a35a5311a6dedaf7c905d32d7b6cf  # incusd/network/ovn: Port GetLogicalSwitchDHCPOptions to libovsdb
+          git cherry-pick 0a945cbaceb34e68d9b6b3ccaf73e373f8515549  # incusd/network/ovn: Port UpdateLogicalSwitchDHCPv4Options to libovsdb
+          git cherry-pick 45d289fb2536ec2b3f6f87754b87da095d050d19  # incusd/network/ovn: Port UpdateLogicalSwitchDHCPv6Options to libovsdb
+          git cherry-pick 42261ff4859644df98333a83f8f8f8fcaa9c0ae4  # incusd/network: Update for OVN function changes
+          git cherry-pick fc49c52b2ce3a79fe2c5329d972d0678b26841fb  # incusd/network/ovn: Port logicalSwitchPortACLRules to libovsdb
+          git cherry-pick b40da9f5a9b79d69d2083b9466e94c5ec4db24d1  # incusd/network/ovn: Port GetLogicalSwitchPorts to libovsdb
+          git cherry-pick fa1609ec2aee7925f2065a5b96cb1cbb01ad2c91  # incusd/network/ovn: Port UpdateLogicalSwitchPortOptions to libovsdb
+          git cherry-pick dea679fe081668e1fd6b2a93482ec88beec587c5  # incusd/network/ovn: Port CreatePortGroup to libovsdb
+          git cherry-pick 26f01d84290cf40fd1a847a9cc060749ef558671  # incusd/network: Update for OVN function changes
+          git cherry-pick c8ba6cf5fcb39efea4c89ee3f332c5f2aaea69c8  # incusd/device/nic: Update for OVN function changes
+          git cherry-pick 80f17907331ab853104201054fc8aa1f30c9a939  # incusd/network/acl: Update for OVN function changes
+          git cherry-pick 48abc8a3b043278bbec5299e7d7a5ac515e0e780  # incusd/network/ovn: Port GetPortGroupsByProject to libovsdb
+          git cherry-pick 04cc2a390591584729fc2feef423663713cc6739  # incusd/network/ovn: Port CreateAddressSet to libovsdb
+          git cherry-pick 5c23be431ca74443dd4795594023263fcfa0a6d7  # incusd/network/ovn: Port UpdateAddressSetAdd to libovsdb
+          git cherry-pick 762967eae8bd565daa76b1eef30788956668f99b  # incusd/network/ovn: Port UpdateAddressSetRemove to libovsdb
+          git cherry-pick 0769b1525682797cdf7e4ed32d82e44a1d55f169  # incusd/network/ovn: Port DeleteAddressSet to libovsdb
+          git cherry-pick 2d3ce78a042ceed365378a04a065942958f975b8  # incusd/network/acl: Update for OVN function changes
+          git cherry-pick f825f08c42c83a24599bb85bbc0b161170b656f7  # incusd/network: Update for OVN function changes
+          git cherry-pick f6696d88e1003c3c36ebf7683ada8674242846c0  # incusd/network/ovn: Port UpdateLogicalSwitchPortLinkRouter to libovsdb
+          git cherry-pick de65389a8cf914a72dbdfde66dd32599fd483dbb  # incusd/network/ovn: Port UpdateLogicalSwitchPortLinkProviderNetwork to libovsdb
+          git cherry-pick 1ebebf7356541125a614d6e3737490a4aa89a5ad  # incusd/network/ovn: Port GetLogicalSwitchIPs to libovsdb
+          git cherry-pick fa5aed1a514801e2078d895316883b4b4ffbfc3a  # incusd/network/ovn: Port GetLogicalSwitchPortDNS to libovsdb
+          git cherry-pick c40746092f08975cb2de1df03e9b45fe0aa28fa9  # incusd/network: Update for OVN function changes
+          git cherry-pick 70246e7b92b9b73a3ec027d8b16157b1473c0537  # incusd/network/ovn: Port UpdateLogicalSwitchPortDNS to libovsdb
+          git cherry-pick 2f9bbd24a8c367fad3598078810347a3d1bd02c9  # incusd/network/ovn: Port UpdatePortGroupMembers to libovsdb
+          git cherry-pick 625d72cc41739696da1441b27a304cce6cb3c9b3  # incusd/network/ovn: Port UpdateLogicalRouterPolicy to libovsdb
+          git cherry-pick 72d715002d5f947471d8c76da6e194f90e019c2a  # incusd/network: Update for OVN function changes
+          git cherry-pick 9efde7ca08c9087a955c4b84b7d606bdacfc0d33  # incusd/network/ovn: Port CreateLoadBalancer to libovsdb
+          git cherry-pick c00cfdaa4bd631b58f369270ac1381133d73ca7a  # incusd/network/ovn: Port GetLogicalRouterRoutes to libovsdb
+          git cherry-pick 3e0b0f6320e780b41b10ac0ce651dae9273ce531  # incusd/network/ovn: Port DeleteLogicalRouterPeering to libovsdb
+          git cherry-pick 99996103509bb557b21f968036b14dbe2c4903a9  # incusd/network: Update for OVN function changes
+          git cherry-pick beb1d679f25671bf575e3d3a5bece1f72a560bd4  # incusd/network/ovn: Port CreateLogicalRouterPeering to libovsdb
+          git cherry-pick 43c2ef0d582e9bd56ed7a03680f1ec76c4471449  # incusd/network: Update for OVN function changes
+          git cherry-pick 08f6d56b59251ea3d1f8e71ae32c2ef49cc35234  # incusd/network/ovn: Port logicalSwitchPortDeleteDNSOperations to libovsdb
+          git cherry-pick a2b90cd42561c3aaa501feb3eb87b2ebe35caddd  # incusd/network/ovn: Port DeleteLogicalSwitchPortDNS to libovsdb
+          git cherry-pick 46ef843a412375fdb2486d63c276d5bd761e9aaa  # incusd/network/ovn: Port logicalSwitchPortDeleteOperations to libovsdb
+          git cherry-pick 7395461cf1458f97eff8c8852b096627f5851ea7  # incusd/network/ovn: Port CleanupLogicalSwitchPort to libovsdb
+          git cherry-pick 56773d9a8c568c134d32ac1a23897e5060ec2769  # incusd/network/ovn: Port aclRuleDeleteOperations to libovsdb
+          git cherry-pick c37abeae6d0cf6efbc56fc5c06154d61263b5790  # incusd/network/ovn: Port aclRuleAddOperations to libovsdb
+          git cherry-pick a8576e25fd633957e39c45ca0c5a0887af553636  # incusd/network/ovn: Port ClearPortGroupPortACLRules to libovsdb
+          git cherry-pick b524c503331545d1ff9d67ae22d118a87b133d95  # incusd/network/ovn: Port UpdatePortGroupPortACLRules to libovsdb
+          git cherry-pick 6eab8432aadac51a054a1c864d6e08021c0275f7  # incusd/network/ovn: Port UpdateLogicalSwitchACLRules to libovsdb
+          git cherry-pick bab70830cd64e77d948d7cc048a88656c50f4622  # incusd/network/ovn: Port UpdatePortGroupACLRules to libovsdb
+          git cherry-pick 20e552557e5bb5bbfc0c0c089e7c342c856421d5  # incusd/network/acl: Update for OVN function changes
+          git cherry-pick 3219d15425fd1336ab880345bbdb559a8c181fd6  # incusd/network: Update for OVN function changes
+          git cherry-pick c49100a279d969d29f6a8d19d5158d92a5633d46  # incusd/network/ovn: Remove nbctl
           git cherry-pick 2f8a458852ce60cb4beeea0c02ff3d621610740c  # incus/storage_volume: Tweak help messages
           git cherry-pick e770a71f77496e96b0315dc149c9ff20cab48259  # i18n: Update translation templates
           git cherry-pick ddba6bce28fa361327b3a4af294e82e6bcc21508  # incus/storage_volume: Fix lint
@@ -328,6 +397,19 @@ jobs:
           git cherry-pick e5179c23c8e6696832424a7d94a4f988b78592ba  # doc/storage_backup: Fix command example
           git cherry-pick c19644c610c0a451477bc7308b29ebd66a8a55d9  # incusd/apparmor/qemu: Relax apparmor rules a bit
           git cherry-pick d33cf8693dc7c6971760888986edad286cc9cb0a  # incusd/apparmor/qemu: Fix typo in rule
+          git cherry-pick 7e437290c84b2d36b097433d9264ec59d43bc304  # incusd/apparmor/dnsmasq: Relax rules a bit
+          git cherry-pick 2708c8bb843e04b3435c1da5ff469dbdcd06666c  # incusd/db/node: Fix version check in GetAPI
+          git cherry-pick fa88a50fa3d12314254dba944f8851c234ac8acb  # incusd/db: Allow cluster startup with differing API extensions
+          git cherry-pick db09e112b004c0a22b29279861b7cc86d5277bad  # incusd: Extend heartbeat data for minimum API extension count
+          git cherry-pick d158502e5926865960425c68b0c6d23e3757fce8  # incusd/storage: Use writeback mode for qemu-img convert
+          git cherry-pick b92fe219fa2823d59d272ac6c16ec6d1b5c2dc1b  # incusd/storage: Improve unpacking message
+          git cherry-pick f0d2151c127d730874908ced5ae9eb6b7517d233  # incusd/operations: Handle percentage only updates
+          git cherry-pick cbc101ac51a1eeb015c2564be6d237cee15d4c62  # incusd/storage: Pass through tracker to qemu-img
+          git cherry-pick 869e33c6ccd978296517077bbd1d4eb5f92cec65  # [lxd-import] lxd/db/cluster: Rename "node" to "cluster member".
+          git cherry-pick 62fc742993f905163036bd977b58ad4cec6025ba  # [lxd-import] lxd/db/cluster: Update error messages in unit tests.
+          git cherry-pick 3a9756dc1628a01451f041fe09ea08dd479b96d1  # incusd/db/cluster: Update tests for relaxed API extensions checks
+          git cherry-pick 9750da5d5fffad1a35a9aaac5d3e4839f9163a92  # incusd/apparmor: Implement progress tracker for qemu-img
+          git cherry-pick 563e3f7fd47e019b3c3345749b0827ef0bb772be  # incusd/cgroup: Handle unknown devices in io.stat
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
