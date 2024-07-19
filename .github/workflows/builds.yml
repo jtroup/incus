@@ -410,6 +410,10 @@ jobs:
           git cherry-pick 3a9756dc1628a01451f041fe09ea08dd479b96d1  # incusd/db/cluster: Update tests for relaxed API extensions checks
           git cherry-pick 9750da5d5fffad1a35a9aaac5d3e4839f9163a92  # incusd/apparmor: Implement progress tracker for qemu-img
           git cherry-pick 563e3f7fd47e019b3c3345749b0827ef0bb772be  # incusd/cgroup: Handle unknown devices in io.stat
+          git cherry-pick f172368e4ee7c800e038be0d63c2e71d7a71eaf3  # incusd/instance_post: Always set the target project
+          git cherry-pick 5cd49ac7d74a58846c75ecf97fde239ba9227393  # incusd/storage/drivers: Consistently set VolumeMultiNode
+          git cherry-pick 294598769728b44e9a67069800da8fd1f516e3f8  # incusd/storage/lvm: Require an exclusive lock during snapshot
+          git cherry-pick 8a5a13697c4bbe58d39d35f15afd002e0c7184cd  # incusd/storage/lvm: Properly handle activation during resize
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
