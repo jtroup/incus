@@ -414,6 +414,15 @@ jobs:
           git cherry-pick 5cd49ac7d74a58846c75ecf97fde239ba9227393  # incusd/storage/drivers: Consistently set VolumeMultiNode
           git cherry-pick 294598769728b44e9a67069800da8fd1f516e3f8  # incusd/storage/lvm: Require an exclusive lock during snapshot
           git cherry-pick 8a5a13697c4bbe58d39d35f15afd002e0c7184cd  # incusd/storage/lvm: Properly handle activation during resize
+          git cherry-pick 407c83246fad4dfda4e84f1142e72f41f9450d2e  # incusd/storage: Properly detect filesystem on remote block
+          git cherry-pick 1375589aa0a230c794e793cf832c6d4db7878cb2  # incusd/cluster: Always attempt to forward custom volume requests
+          git cherry-pick 8086a0d3a0e0eb71db87c0c7fe085adc80d0cd3f  # client: Always set GetBody
+          git cherry-pick c87420bc2cbcef748453a82e34ba74138edca3a6  # client: Report OIDC refresh failure
+          git cherry-pick 2e959348065d95582fc763a0c16331bd11072a9a  # incus/remote: Forward OIDC auth failures
+          git cherry-pick 759f39d02496da6c989590f7e3803937e9327e99  # client: Retry when told to by the proxy
+          git cherry-pick e63fc73112176ce0d73bb27062caa8d237d2d5df  # Use qemu-img convert output to update progress
+          git cherry-pick 2928a8e9731e5af8a6b75bddf9305a9ae633d90c  # incusd/cluster: Add flagFormat
+          git cherry-pick 55182f95076489598361439977bcd851eab60573  # internal/cmd: Add support for format options
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
