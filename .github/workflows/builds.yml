@@ -393,7 +393,6 @@ jobs:
           git cherry-pick 471c0de3b90f4afa8fed6cf1bb760f83eb539ea1  # incus/top: Set interval to 10s (minimum server-side is 8)
           git cherry-pick 2762921e22bcb2666498bcce30cf78568458ba8f  # incus/top: Hide zero values
           git cherry-pick 698aa57fd8996ff47b0d281024a9955c99449315  # incusd/device/disk: Mark virtual disks as always migratable
-          git cherry-pick ca64aa1c64fe484488041874ef700d5a8aca8960  # tests: Update metrics test for recent change
           git cherry-pick e5179c23c8e6696832424a7d94a4f988b78592ba  # doc/storage_backup: Fix command example
           git cherry-pick c19644c610c0a451477bc7308b29ebd66a8a55d9  # incusd/apparmor/qemu: Relax apparmor rules a bit
           git cherry-pick d33cf8693dc7c6971760888986edad286cc9cb0a  # incusd/apparmor/qemu: Fix typo in rule
@@ -421,8 +420,15 @@ jobs:
           git cherry-pick 2e959348065d95582fc763a0c16331bd11072a9a  # incus/remote: Forward OIDC auth failures
           git cherry-pick 759f39d02496da6c989590f7e3803937e9327e99  # client: Retry when told to by the proxy
           git cherry-pick e63fc73112176ce0d73bb27062caa8d237d2d5df  # Use qemu-img convert output to update progress
-          git cherry-pick 2928a8e9731e5af8a6b75bddf9305a9ae633d90c  # incusd/cluster: Add flagFormat
-          git cherry-pick 55182f95076489598361439977bcd851eab60573  # internal/cmd: Add support for format options
+          git cherry-pick e04dae41592ad46b1ab4085012e27faf2c9b1303  # incusd/auth: Fill missing local volume location
+          git cherry-pick 19b95f968d4b97cc80341e1f0b1d4945da23a393  # incusd/cluster: Correctly record volatile.cluster.group on move
+          git cherry-pick e45cfc1dae0e1b9f45ae76631539c9da5a69acfc  # incusd/migration: Show source errors first
+          git cherry-pick 5cd7c9f6f1c7b5a65d980dfe123c66bd21942ed8  # incusd/instance/qemu: Clarify live migration error
+          git cherry-pick 1787edef813f214c4fd70d163333baacd0d9d0eb  # incusd/cluster: Attempt to ping the server prior to healing
+          git cherry-pick 65be2914530df38863e3bd9d8c1578802d7e35ba  # incusd/instance/qemu: Fix bad timeout errors
+          git cherry-pick 6b5e0709435550149ce0b00a526ab686791a0bdd  # incusd/instance/qemu: Send two ACPI events on shutdown
+          git cherry-pick cb8fb00568b0c2452bd1dd85e56e9f25457110cf  # incusd/instance: Add progress tracking to export
+          git cherry-pick e17afcf9f76c2de6f8252545ef72dcc93513ae32  # client: Remove GetBody when can't seek back
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
