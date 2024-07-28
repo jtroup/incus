@@ -383,6 +383,9 @@ jobs:
           git cherry-pick d90014dcc9b3804241b64add16365f137f240110  # doc/installing: Mention incus-tools package
           git cherry-pick 579ee11e8fb791e561338b8bc8b19c6680090557  # incusd/apparmor: Allow devpts mounts
           git cherry-pick db3931780d6406de5d6c1f500965a91bd4a618c0  # incusd: Improve profile rename errors
+          git cherry-pick b7c25c644556761d9bdf6f3f390adbc13b020713  # incusd/sys: Add cluster resources cache path
+          git cherry-pick 6d5cecde1e60969c79a668635334ecb38c675051  # incusd/daemon: Locally cache other server resources
+          git cherry-pick 7b090dc60d79e0332c120de67c73c2dabf1404ab  # incusd/instance/drivers/qmp: Add QueryCPUModel
           git cherry-pick 47df62388b5a81f8bcb80fe6d7468647dbfd9b2f  # incus-user: Use shorter interrface name for long UIDs
           git cherry-pick cc38d4ff6ad28478ae4dfc25717050eda576b2f5  # incusd/device/network: Fix Tap interface MTU when in OVN
           git cherry-pick bde005e4f5db0e52b14b254ebeba14fbd20caef9  # incusd/isntance: Don't expose all internal flags in INFO message
