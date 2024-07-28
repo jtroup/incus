@@ -373,6 +373,10 @@ jobs:
           git cherry-pick 20e552557e5bb5bbfc0c0c089e7c342c856421d5  # incusd/network/acl: Update for OVN function changes
           git cherry-pick 3219d15425fd1336ab880345bbdb559a8c181fd6  # incusd/network: Update for OVN function changes
           git cherry-pick c49100a279d969d29f6a8d19d5158d92a5633d46  # incusd/network/ovn: Remove nbctl
+          git cherry-pick ed4d17e9ecf14148f0b814e7a645084ae1bd11f8  # incusd/instance/edk2: Add new package to track EDK2 firmwares
+          git cherry-pick 5ca9dff37f9467b6ae951dc833e9881dfc9daddd  # incusd/instance/qemu: Update to the new edk2 package
+          git cherry-pick a8322c9b3a8da3ca9781a2e8d287cfc74729fee0  # incusd/apparmor: Update to the new edk2 package
+          git cherry-pick a0f00bf93c78d6b6e1eab926733c78e5e97a18ff  # doc: Cleanup OVMF/EDK2 handling to cover aarch64
           git cherry-pick 2f8a458852ce60cb4beeea0c02ff3d621610740c  # incus/storage_volume: Tweak help messages
           git cherry-pick e770a71f77496e96b0315dc149c9ff20cab48259  # i18n: Update translation templates
           git cherry-pick ddba6bce28fa361327b3a4af294e82e6bcc21508  # incus/storage_volume: Fix lint
@@ -382,6 +386,11 @@ jobs:
           git cherry-pick 47df62388b5a81f8bcb80fe6d7468647dbfd9b2f  # incus-user: Use shorter interrface name for long UIDs
           git cherry-pick cc38d4ff6ad28478ae4dfc25717050eda576b2f5  # incusd/device/network: Fix Tap interface MTU when in OVN
           git cherry-pick bde005e4f5db0e52b14b254ebeba14fbd20caef9  # incusd/isntance: Don't expose all internal flags in INFO message
+          git cherry-pick 50c8f44dbde8a988d495084d6e98e160a4698c1b  # incusd/instance/lxc: Allow calling Update from a Create operation
+          git cherry-pick 768d47d044902250f82ef99ba570cd14f60b76b2  # shared/subprocess: Allow building on Windows
+          git cherry-pick 56a3b7f299f2e5c3a2ae5c4b0dce4a308ca278d1  # client: Add basic OCI registry client
+          git cherry-pick e976088de179584ae4481d052a7312b4c3eea30c  # shared/cliconfig: Add OCI remote support
+          git cherry-pick 6eb970d1da6f4eb1fa35a3c5251fbd17f84df51c  # shared/subprocess: Fix gofmt
           git cherry-pick c1f4f32d7131e60e3c810da36e80d9da4716766f  # incusd/storage/lvmcluster: Don't allow buckets
           git cherry-pick 3a0c698df5b9cac8caf417c070e43638a63cf5de  # incusd/storage/lvmcluster: Don't exclusively lock ISO volumes
           git cherry-pick 5941015bcd88986146e6e3535b940045992b9702  # incusd/device/disk: Allow attaching the same ISO to multiple instances
@@ -393,7 +402,11 @@ jobs:
           git cherry-pick 471c0de3b90f4afa8fed6cf1bb760f83eb539ea1  # incus/top: Set interval to 10s (minimum server-side is 8)
           git cherry-pick 2762921e22bcb2666498bcce30cf78568458ba8f  # incus/top: Hide zero values
           git cherry-pick 698aa57fd8996ff47b0d281024a9955c99449315  # incusd/device/disk: Mark virtual disks as always migratable
+          git cherry-pick ca64aa1c64fe484488041874ef700d5a8aca8960  # tests: Update metrics test for recent change
           git cherry-pick e5179c23c8e6696832424a7d94a4f988b78592ba  # doc/storage_backup: Fix command example
+          git cherry-pick 9ef3173980194067b823d2cd9df8063707c66645  # incusd/instance/edk2: Support OVMF filenames on arm64
+          git cherry-pick ff744921840a06b970998ed6c371ad706b7b4761  # incus/s3: Fix mcli minio client executable name check
+          git cherry-pick a706df545f2b8c32e523412c0616bb6f241ca352  # Change RunDir file mode to 0711
           git cherry-pick c19644c610c0a451477bc7308b29ebd66a8a55d9  # incusd/apparmor/qemu: Relax apparmor rules a bit
           git cherry-pick d33cf8693dc7c6971760888986edad286cc9cb0a  # incusd/apparmor/qemu: Fix typo in rule
           git cherry-pick 7e437290c84b2d36b097433d9264ec59d43bc304  # incusd/apparmor/dnsmasq: Relax rules a bit
@@ -420,6 +433,15 @@ jobs:
           git cherry-pick 2e959348065d95582fc763a0c16331bd11072a9a  # incus/remote: Forward OIDC auth failures
           git cherry-pick 759f39d02496da6c989590f7e3803937e9327e99  # client: Retry when told to by the proxy
           git cherry-pick e63fc73112176ce0d73bb27062caa8d237d2d5df  # Use qemu-img convert output to update progress
+          git cherry-pick 2928a8e9731e5af8a6b75bddf9305a9ae633d90c  # incusd/cluster: Add flagFormat
+          git cherry-pick f1b35e0b8a97e7418e7b4360a21627a0b31befac  # incusd/isntance/edk2: Move seabios to /usr/share/qemu
+          git cherry-pick 99d1fe855db6ecc6c3ae5e467530284eaa5846f3  # incusd/isntance/edk2: Add ArchLinux x86_64 paths
+          git cherry-pick 46fef15ab8c546e2c9ced3ed82321c518af75efa  # tests: Use future values in property test
+          git cherry-pick 66214e629d65b20184d312f72df4a2d018f9da59  # incusd/db/cluster: Cleanup indentation
+          git cherry-pick b05cc4fa89082ae6ce3fdc57f975130c11c42bda  # incusd/db/cluster: Update schema
+          git cherry-pick ce3537aa8bc0739041bbedebef23c2cd3f94dd3d  # incusd/db/generate: Add exception for cluster tables
+          git cherry-pick 37604a8dfd529956bb51017c78cd3f61531966f2  # incusd/resources: Add sortedMapKeys
+          git cherry-pick 2cf9941baa9b47cd5e403b598d25cd986dceafe0  # incusd/resources/cpu: Sort sockets, cores and threads
           git cherry-pick e04dae41592ad46b1ab4085012e27faf2c9b1303  # incusd/auth: Fill missing local volume location
           git cherry-pick 19b95f968d4b97cc80341e1f0b1d4945da23a393  # incusd/cluster: Correctly record volatile.cluster.group on move
           git cherry-pick e45cfc1dae0e1b9f45ae76631539c9da5a69acfc  # incusd/migration: Show source errors first
@@ -429,6 +451,138 @@ jobs:
           git cherry-pick 6b5e0709435550149ce0b00a526ab686791a0bdd  # incusd/instance/qemu: Send two ACPI events on shutdown
           git cherry-pick cb8fb00568b0c2452bd1dd85e56e9f25457110cf  # incusd/instance: Add progress tracking to export
           git cherry-pick e17afcf9f76c2de6f8252545ef72dcc93513ae32  # client: Remove GetBody when can't seek back
+          git cherry-pick 81ba3463b3e82d3f81bc180fcf15d39d6620f8bd  # client: Add Seek call to GetBody
+          git cherry-pick 356d75ca81e67783ebfea57e9f260a7dd7d9313d  # incusd: Simplify image replication
+          git cherry-pick 97174c564f01d6707347fee08fa41c20835278d7  # incusd/images: Only remove from authorizer once
+          git cherry-pick 337e11546f14133671c5212276a167900324042a  # incusd/images: Correctly record new aliases
+          git cherry-pick 62247d7b0ac65a7d69c0575b9e98ab3a3141dd54  # incusd/images: Correctly remove aliases
+          git cherry-pick 26a5a27378b43d687b3f92cd499579b94812c12b  # incusd/images: Set authorizer entries at the correct time
+          git cherry-pick 278346e4f36fa672bfae65b4ea2d358534b6af18  # incusd/images: Don't alter image info on cluster copy
+          git cherry-pick c6b408b3a46f49b6df8905b06b6d876d2e5615dc  # incusd/storage_pools: Set authorizer for pending pools
+          git cherry-pick cb1a1eb8596b565339bc2005d96fc585181918a9  # incusd/networks: Set authorizer for pending networks
+          git cherry-pick 6f29617971c617aecf07d7a786603972f9af4d51  # incusd/network: Handle long interface names
+          git cherry-pick 2a2a3e90db645df48584587c0eb270b3e54a58d7  # incus/cluster: Cleanup certificate update message
+          git cherry-pick 2f5f50c605e6d4fbdc277af01ac69f74008043d7  # [lxd-import] github: stop purging core20
+          git cherry-pick 1ded3b81b2d5b4ad4f1068b518df0f958493c830  # [lxd-import] github: purge disabled/superseded snaps
+          git cherry-pick 75feddc00c34681417c9024f120902ba21599b4d  # [lxd-import] github: move snap removal to "Reclaim some space" step
+          git cherry-pick c2270df3f6158e09e5eb4a105aea95e7c53aa8f7  # [lxd-import] github: put docker removal its own step
+          git cherry-pick 17506e403463f03716d657be14285abafe369942  # [lxd-import] github: mask lxc{,-net}.service in a singe command
+          git cherry-pick c2f943c527daf63bc5bcda871c40f8ecf377db87  # [lxd-import] lxd/instance/drivers/driver/qemu: Don't leak file descriptor when probing for Direct I/O support
+          git cherry-pick 218c9695592dcf1fa0ecff018e78ee3f04790aad  # [lxd-import] lxd/network/acl: Change protocol field for ovn logs
+          git cherry-pick 4abe78277cf9462695dd187fe26e1bf4943fe3b5  # [lxd-import] lxd/instance: Reject limits.kernel config for VMs
+          git cherry-pick d6ab4777bcbae09182445fbce06df266dee9d200  # [lxd-import] doc: `limits.kernel` only applies to containers (see #12874)
+          git cherry-pick 03f5f175662c921dc1e1c759081c0a71bb0e2cca  # [lxd-import] lxd/storage: Fix resize for pools with custom zfs.pool_name
+          git cherry-pick 11787472e572c6864801901710a7846354c5be21  # [lxd-import] lxd/storage/drivers/driver_zfs_utils: fix typos
+          git cherry-pick 1acf8694624411034e91191fc7e5e1492088e389  # [lxd-import] lxd/storage/drivers/driver_zfs_utils: make it explicit that blocksize is in bytes
+          git cherry-pick b9c8f8f50b966591bdc2cd0fd88418aa5c76aaac  # [lxd-import] lxd/task/group: Make cancel type of context.CancelFunc for clarity
+          git cherry-pick 878ac6d6f6ac3fc13a5979621063d25eb48fb78a  # [lxd-import] doc: Add paragraph on how to delete images
+          git cherry-pick 3ae9f423b59d990fc287715ba25226da8e688e57  # [lxd-import] test: Add exec exit code test
+          git cherry-pick d67f737d95cddbf2833312904ffbdce3c1460869  # [lxd-import] lxd/apparmor: allow confined services to receive required signals
+          git cherry-pick d613c51ff82a04fee3196da997855a62d4bb4751  # [lxd-import] lxd/rsync: Consistently compare files on nanosecond basis
+          git cherry-pick f8c45bde4ad62b0bd863eac989953be89496fc0b  # [lxd-import] test/suites/migration: Check for file contents after refresh
+          git cherry-pick e20744076b338bd19e131e3208054657da79094a  # [lxd-import] test/suites/migration: Check local and remote instance refreshes based on nanoseconds
+          git cherry-pick 8e4d1d9f9684d80156359ad49cd7ca1e8b54b10c  # [lxd-import] doc: add paragraph on how to delete images
+          git cherry-pick f90674bae7bf64f5bb6a7960f32cef18eb7e407e  # [lxd-import] doc: enable multiprocessing for pyspelling
+          git cherry-pick aabd94b8bd5673a797d388e13b448a8c36137c29  # [lxd-import] Makefile: have run-parts report which script it runs
+          git cherry-pick ffa5f71570140e94e1cb71c0bd13dcf887f4d89b  # [lxd-import] lxd/storage/drivers/ceph: Disable filesystem config keys on block volumes
+          git cherry-pick 11835641028b8946338fc233d030e875b3916e96  # [lxd-import] lxd/storage/drivers/lvm: Disable filesystem config keys on block volumes
+          git cherry-pick 6175a1b51c61bd52b1f02a9f86cb1f780e5da057  # [lxd-import] test: Add check to restore custom volumes of type block
+          git cherry-pick 78cae123e76aedf4159be839d00a37a9af271440  # [lxd-import] lxd/storage/drivers/ceph: Update UnmountVolumeSnapshot docstring
+          git cherry-pick 74696c1d2df5c8523951a1b78a373ae865e71b51  # [lxd-import] lxd: Improve error check for existing certificates
+          git cherry-pick 6bc4224c5a70d17c9ed5f16baa966b5c2b0bbdef  # [lxd-import] shared/api: Updates swagger description for certificate field.
+          git cherry-pick f10b26707fcfc2880b509a5b2fd4c48d9ac83eb0  # [lxd-import] shared/api: Fix lint errors (receiver-naming).
+          git cherry-pick f9748b706c41b446693ea3c931b4efbbe14906a5  # [lxd-import] lxd/db/cluster: Fix lint error (revive: var-naming).
+          git cherry-pick 8a82dab9cafc2e80ea2f8b164a0acbb3c0ea26f6  # [lxd-import] lxd-migrate: Ignore lint error (revive: deep-exit).
+          git cherry-pick 6e17cbb5bc99c5d59acbde29ee32c09601fb2681  # [lxd-import] lxc/remote: Fix lint errors (revive: exported).
+          git cherry-pick 98a8572d32d04f2d536500637a25102c4abfddb5  # [lxd-import] lxd/storage/backend: Don't validate custom storage volumes twice
+          git cherry-pick 61260262d98c9874f446d0d5d1dd2d3792608c72  # [lxd-import] lxd-generate: Return helpful error instead of panicking.
+          git cherry-pick 67ff1d2201067839935f2d33b7536787c00265cc  # [lxd-import] lxd/storage/backend: Use quotes consistently for error messages
+          git cherry-pick dc79fde4e4d715d5fa336788bcef9f4c9c66c562  # [lxd-import] lxd/project: Don't panic on StorageVolumeParts
+          git cherry-pick e1afcee931a6abe4d3770b362a7f3ffd95ffcea6  # [lxd-import] github: don't abort on remount failures
+          git cherry-pick f8e8ebaa12f509f599ba699cbb18037b0c30e977  # [lxd-import] test/main: add log grouping (GHA)
+          git cherry-pick e4f308b04840f2c157db98182c7a50773629d3cd  # [lxd-import] test/main: show dmesg on failure
+          git cherry-pick eef97b1af9236926ef8442b7a86b6322b1190fa9  # [lxd-import] lxd/api/internal: Use correct quoting for error in internalImportFromBackup
+          git cherry-pick 20b42987b081fcc16151adcf8ebb7ec28f0f934a  # [lxd-import] lxd/db/cluster/devices: Use correct string quoting of device type for error in NewDeviceType
+          git cherry-pick 921deab0241912de16ff8c1b448002328f82e379  # [lxd-import] lxd/instances/post: Improve error in createFromBackup
+          git cherry-pick 41bf4f6b21cd79feecb07e4b714171cff1fe9d9b  # [lxd-import] lxd/storage/backend/lxd: Update backup.yaml after instance and volume DB records have been generated in CreateInstanceFromBackup
+          git cherry-pick 9760ca660379c48e5a4acceca610b62cf4d3d17b  # [lxd-import] test/main: don't wrap tests logs in log groups
+          git cherry-pick 76227143984bf88003de365d79eef127a95bea10  # [lxd-import] lxd/device/disk: Remove config.iso file when the cloud-init:config disk device is removed
+          git cherry-pick 11d8efe016e401633638b63a4b44b3ddcb55fd6d  # [lxd-import] lxd/images: Add project to error in autoSyncImages
+          git cherry-pick 2484ebb9fd91dfbb718fefe9bc0ee04ee6559564  # [lxd-import] lxd/project/project: Remove optimisation from StorageVolumeProject
+          git cherry-pick 323b4cbc9c58aadff5cb27fdb2922d1db5721072  # [lxd-import] lxd/storage/volumes: Remove unnecessary 2 line variable definition in doCustomVolumeRefresh
+          git cherry-pick 0177bf986809920c891a458450d4ae053b4aaddc  # [lxd-import] lxd/storage/volumes: Remove unnecessary 2 line variable definition in doVolumeCreateOrCopy
+          git cherry-pick 8fca9bccb730700d22a7f12dcbc17c80c21b79e2  # [lxd-import] lxd/storage/volumes: Validate source project in doCustomVolumeRefresh
+          git cherry-pick f6d23bb02debc2d8246b309dae23da0bfdbfb605  # [lxd-import] [lxd-import] lxd/storage/volumes: Validate source project in doVolumeCreateOrCopy
+          git cherry-pick 176783d11e98aea66a028fa1c8ee508759763f58  # [lxd-import] lxd/db/cluster: Remove redunant parentheses.
+          git cherry-pick 657aaee2ceaa1ce2b158de4ca53a837535daf547  # [lxd-import] lxd/migrate/storage/volumes: Use volume name from DB in migrationSourceWs.DoStorage
+          git cherry-pick b54c60999f2a23b1536c86abe57c03ae2c857e3d  # [lxd-import] lxd/network/network/utils: Fix incorrect conversion from int64 to int in inRoutingTable
+          git cherry-pick 29ce617c1935b37b89d2cacb09f1e4f9bb8877c2  # [lxd-import] lxd/network/network/utils: Remove unnecessary call to fmt.Sprintf by passing base to ParseInt
+          git cherry-pick d57e14de4faba053762b6f16c9fe8ea5b89b9af7  # [lxd-import] lxd/response: Use SmartError if SyncResponse success=false
+          git cherry-pick 3b0ec4c9b771441d8e2518cfbe920cb12daf2112  # [lxd-import] lxd/storage/drivers/driver/zfs/volumes: Fix error scoping in CreateVolumeFromCopy
+          git cherry-pick 97523ce986e8c0050a1e1b4414934c7dab56721c  # [lxd-import] lxd/storage/drivers/driver/zfs/volumes: Define send/receive channels together in CreateVolumeFromCopy
+          git cherry-pick bafa1103a743a0463f12676b6b187b83a66a3c06  # [lxd-import] lxd/storage/drivers/driver/zfs/volumes: Kill sender if receiver fails in CreateVolumeFromCopy
+          git cherry-pick 2ad9fc13a8bf48504b7b9e49ce76b45fcb1e67c0  # [lxd-import] lxd/storage/drivers/driver/zfs/volumes: Handle multi-line errors in CreateVolumeFromCopy
+          git cherry-pick 60e89a426f17cf21fee3f5ebca762f31c7b6d957  # [lxd-import] lxd/storage/drivers/driver/btrfs/volumes: Fix hang when btrfs receive fails in RefreshVolume
+          git cherry-pick 7c0b2379953f877049a5a290c48b52e3b5dcf563  # [lxd-import] lxd/storage/drivers/driver/btrfs/volumes: Handle multi-line errors in RefreshVolume
+          git cherry-pick f78c18826aac49d42f9e52f3b654db430535af71  # [lxd-import] lxd/storage/drivers/driver/zfs/volumes: Aligns RefreshVolume with BTRFS driver
+          git cherry-pick 90bbf39748d1df309f0ce257b210546c89d2a9e7  # [lxd-import] lxd/response: Fallback to error response after setting headers
+          git cherry-pick 3c0a5b873b2feb2850f8746e91f4c579d2d5b999  # [lxd-import] lxd/storage/backend/lxd: Use volume name from VolumeDBGet in BackupCustomVolume
+          git cherry-pick c01d9b7db8856f9561e04e1e1f125972bff7ed1f  # [lxd-import] lxd/storage/drivers/btrfs: Clarify fallback in case UUID discovery times out
+          git cherry-pick 82c30f103fbd9e96fd0836f688f8bc7278fdf488  # incusd/db/cluster: Fix import shadowing
+          git cherry-pick d8e7540b5b9fdcb736ffc70cf10e68db0ac16f11  # doc/rest-api: Refresh swagger YAML
+          git cherry-pick e1258e27e653a96f05d1f46f7749ea8941021085  # [lxd-import] lxd/storage/drivers: Add volume param to roundVolumeBlockSizeBytes
+          git cherry-pick 123fca0b83c8c51b091038f23ea9c1b88a08697c  # [lxd-import] lxd/storage/drivers/zfs: Round to zfs.blocksize or 16KiB
+          git cherry-pick 3f96ea3381fe0163f5004808cfba6633412af505  # [lxd-import] test/storage: Add non-power-of-two sized storage check
+          git cherry-pick 7a402d002203f803fd85ef28dcc8b522fdce3b48  # [lxd-import] test/storage: Remove zfs rounding test
+          git cherry-pick daa460626798310a45d63756d35f342e4120d2b3  # [lxd-import] lxd/storage/drivers: Refactor volume size rounding logic
+          git cherry-pick 058cfe868a61eb63e81490e7fb708bf6cec3bf20  # [lxd-import] lxd/storage/drivers/zfs: Wait for device to appear when activating a volume
+          git cherry-pick 435c2c329c04bdb3e7edc1a5366b38b4bf25e43d  # [lxd-import] lxd/storage/drivers/zfs: Check for non /dev/zvol/* paths
+          git cherry-pick 3a637e7f53c0307016ee015cace70cc376cc4765  # incusd/storage/zfs: Fix import shadowing
+          git cherry-pick fa79f0c17ea16d92c1ba64e17a9f372999ee2a7d  # Make run-parts running compatible with different versions
+          git cherry-pick ab8fca0e52852c91787f1ed91521a47ce555cbf9  # incus/top: Properly filter disk usage
+          git cherry-pick cbc404e493c854125f439c70828bbfb2ad24d3a6  # incusd/state: Add Cluster gateway
+          git cherry-pick 5b9afebdd04a973c6d97013bf4a397c7da7f8a8c  # incusd/daemon: Sort state fields
+          git cherry-pick b026c0f3a68f4904597f8b3209db8dc61b55add6  # incusd/daemon: Add cluster gateway to state
+          git cherry-pick aad0a63b1847918977ba4537524529fa8fca4c7b  # incusd/acme: Update for state change
+          git cherry-pick 224d17ed943ffea343e01a94e7241d7d8f7c9a67  # incusd/images: Update for state change
+          git cherry-pick 80e17d141de10f3ffeb4da6ec9eddb51dae004e8  # incusd/operations: Update for state change
+          git cherry-pick 7d8963a3182d549a834cbf265636cba7a6d54d23  # incusd/instances: Update for state change
+          git cherry-pick 1d7824a6fd24baa24caa99db178615b4df3fe20b  # incusd/patches: Update for state change
+          git cherry-pick cc6e08666f655f6ee3ebe007ec8d1ccb66803668  # incusd/cluster: Update for state change
+          git cherry-pick c06d87494214680974a5e1c4c1286348f0f49e32  # incusd/instances: Use targetGroupPrefix
+          git cherry-pick 8ac27779b0311d49bd9a444c7ab9bd8b2d650f9c  # incusd/cluster: Split files
+          git cherry-pick 98af3f57e571823869c6f26b0ae49ee6983bb6c4  # incusd/cluster: Fix import shadowing
+          git cherry-pick 513bccc3d32da1729844a6e5d8176e2ceeb54534  # incusd/cluster: Re-factor healing logic
+          git cherry-pick fa187d31cbe5a48ac8255b5debd2d9781834ac00  # incusd/cluster: Improve logging
+          git cherry-pick 047d8b090103d93a0f883cedba3e6bd809522bd1  # incusd/cluster: Reduce dqlite logging
+          git cherry-pick f2e91a1835338d2900cc72509f074cda9e147610  # incusd/cluster: Extend HasConnectivity to do API checking
+          git cherry-pick e7bf949cc84cb14d341f6706ec36eaa56c43b983  # incusd/cluster: Add HasConnectivity check to event handling
+          git cherry-pick ae0c4a26486763f5ab0039d4dcc1e26c369e4268  # incusd: Don't block on startup for cluster queries
+          git cherry-pick 5b5ce64d00819a2e04ea670fc65895f14c065e73  # incusd/cluster: Rework offline server detection
+          git cherry-pick 3b86b6ee4b681b25d7baa1d1478bef42dc4938f8  # incusd/cluster/evacuation: Add separate healing mode
+          git cherry-pick a65879bc7f3b9df940eff1a33094defcff3592e3  # incusd/cluster/healing: Try up to 5 times
+          git cherry-pick 4c76cbf8eb603ef58e32646479ab5b0914bd51ff  # incusd/cluster/healing: Add logging
+          git cherry-pick 22da35d4c4a1191febd36d8875015d59da5c3f5c  # incusd/device/disk: Fix bad CanMigrate logic
+          git cherry-pick db00b8f89d791e2dc32f33b91b134c7c4409021f  # incusd/storage/lvm: Properly activate/deactivate ISOs
+          git cherry-pick 2c7774cde94c93a5394d35913082c90b420337b1  # incusd/images: Expose image type as header
+          git cherry-pick 9d58f4efa96502626e7872561941c4681172d7ca  # client: Skip image hash if OCI
+          git cherry-pick 022d28c2ceca9f5363c7d992d0392466d13315fa  # incusd/device: Don't fail on LXCFS device entry
+          git cherry-pick 9b88efcdd9cc2a308cce687c7071718473c02a55  # client: Report source errors too on copy
+          git cherry-pick e922b5d5bedc4563d43f1b264537e7adca1b3df1  # incusd/storage: Have roundVolumeBlockSizeBytes return an error
+          git cherry-pick 0173de4d9754035865f190390e6d531acedbdfff  # incusd/instance_post: Fix cross-server live-migration
+          git cherry-pick f6e8eb1308c4abee608a9ee1c8288fe96fa48adf  # incus/image: Correct image copy logic
+          git cherry-pick eb7c1379d2bb447d10d6728e243b59aa659996f4  # incusd/storage/lvm: Hardden common functions
+          git cherry-pick 476652105646f8d4a16c63b502bd8b4ae4cba7f5  # incusd/api: Don't panic on missing config
+          git cherry-pick 97f6c52c4c66a4c2ac9f518dd6709fc31190bb6a  # incusd/storage: Add Deactivate flag
+          git cherry-pick 53eb6348422409105e9c3866c1189011b6506286  # incusd/storage/lvm: Add deactivation step for clusters
+          git cherry-pick 61692509bf78a4d19d8a93304d918c9aa758d8c2  # incusd/cluster: Return clear status for servers currently starting up
+          git cherry-pick 30ffea29d81d683718ab31b908751ded7005ae45  # incusd/instance/lxc: Reduce logging level
+          git cherry-pick a34ca847b4cb3f9461f8048989d45857cdda566d  # incusd/instance/qemu: Reduce logging level
+          git cherry-pick 9f5902bff0fbf31b630d03e06a2a2696c9265c5d  # incusd/migrate: Reduce logging
+          git cherry-pick ca5b2cb2d54ae51d196e1bd380bbf5cf52e851bc  # incusd/storage: Reduce logging
+          git cherry-pick a277d933a1bfafd5e198a18887b1dd8c49fd92d9  # incusd/instance/qemu: Remove double lifecycle event
+          git cherry-pick b0622c5d3bf6cc60f5a8ecc9847688ded8401dd9  # tests/clustering: Use correct target project argument
+          git cherry-pick dd47cb8bfca95da26767e62e24bdc04d4e4aa8c9  # incusd/isntance/edk2: Fix CSM handling
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
