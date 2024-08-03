@@ -1,0 +1,26 @@
+From 565644426f2e26f2c70242516a7081e875633205 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
+Date: Sat, 3 Aug 2024 04:55:42 +0000
+Subject: [PATCH 13/13] Fix network forward count logic
+
+Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+---
+ src/pages/networks/NetworkForwardCount.tsx | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/pages/networks/NetworkForwardCount.tsx b/src/pages/networks/NetworkForwardCount.tsx
+index 77a438b..a252e61 100644
+--- a/src/pages/networks/NetworkForwardCount.tsx
++++ b/src/pages/networks/NetworkForwardCount.tsx
+@@ -10,7 +10,7 @@ interface Props {
+ }
+ 
+ const NetworkForwardCount: FC<Props> = ({ network, project }) => {
+-  if (network.managed === false) {
++  if (network.managed === false || (network.type != "bridge" && network.type != "ovn")) {
+     return <>-</>;
+   }
+ 
+-- 
+2.34.1
+

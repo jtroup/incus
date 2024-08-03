@@ -1,7 +1,7 @@
-From 4a477c328eada5d3b3dfee39b6949dc97c36f813 Mon Sep 17 00:00:00 2001
+From 8fde9ab54dde909db557c49765e3bdd06ddf14f6 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:02:27 +0000
-Subject: [PATCH 2/8] Update navigation
+Subject: [PATCH 02/13] Update navigation
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -14,10 +14,10 @@ Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
  3 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/src/components/Navigation.tsx b/src/components/Navigation.tsx
-index 147676a..64a97d3 100644
+index bdfad68..046bc4c 100644
 --- a/src/components/Navigation.tsx
 +++ b/src/components/Navigation.tsx
-@@ -261,7 +261,7 @@ const Navigation: FC = () => {
+@@ -490,7 +490,7 @@ const Navigation: FC = () => {
                    <li className="p-side-navigation__item">
                      <a
                        className="p-side-navigation__link"
@@ -26,7 +26,7 @@ index 147676a..64a97d3 100644
                        target="_blank"
                        rel="noopener noreferrer"
                        title="Discussion"
-@@ -276,7 +276,7 @@ const Navigation: FC = () => {
+@@ -505,7 +505,7 @@ const Navigation: FC = () => {
                    <li className="p-side-navigation__item">
                      <a
                        className="p-side-navigation__link"

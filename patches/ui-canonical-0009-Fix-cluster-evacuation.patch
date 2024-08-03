@@ -1,0 +1,25 @@
+From 124daebf29acfce8d4a1240fbae72ae0ce02ceec Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
+Date: Fri, 2 Aug 2024 18:42:11 +0000
+Subject: [PATCH 09/13] Fix cluster evacuation
+
+Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+---
+ src/api/cluster.tsx | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/api/cluster.tsx b/src/api/cluster.tsx
+index 6848901..c328b82 100644
+--- a/src/api/cluster.tsx
++++ b/src/api/cluster.tsx
+@@ -26,7 +26,6 @@ export const postClusterMemberState = (
+       method: "POST",
+       body: JSON.stringify({
+         action: action,
+-        mode: "start",
+       }),
+     })
+       .then(handleResponse)
+-- 
+2.34.1
+

@@ -1,7 +1,7 @@
-From e36304b2f02f3bb6bb9bc80482afc9b36df2d3c1 Mon Sep 17 00:00:00 2001
+From f82ef830e2cf921ff82e963cf407d190ba2588f4 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:16:13 +0000
-Subject: [PATCH 5/8] Remove Canonical image servers
+Subject: [PATCH 05/13] Remove Canonical image servers
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -12,7 +12,7 @@ Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
  1 file changed, 10 insertions(+), 41 deletions(-)
 
 diff --git a/src/pages/images/ImageSelector.tsx b/src/pages/images/ImageSelector.tsx
-index ca10169..2123eb4 100644
+index d4b009f..b252db4 100644
 --- a/src/pages/images/ImageSelector.tsx
 +++ b/src/pages/images/ImageSelector.tsx
 @@ -33,16 +33,9 @@ interface Props {
