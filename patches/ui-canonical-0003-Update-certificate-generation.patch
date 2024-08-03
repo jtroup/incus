@@ -1,7 +1,7 @@
-From 767dff6c01f0c8195f4044beb3059533a814212a Mon Sep 17 00:00:00 2001
+From 871d334a7d265b62c40c1b3cb33c86373511eb7d Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:03:33 +0000
-Subject: [PATCH 3/8] Update certificate generation
+Subject: [PATCH 03/13] Update certificate generation
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -169,19 +169,19 @@ index 2ea99de..39dce9f 100644
                  </Col>
                </Row>
 diff --git a/src/util/certificate.tsx b/src/util/certificate.tsx
-index b409147..a802f5d 100644
+index 5d7d74a..8ab9632 100644
 --- a/src/util/certificate.tsx
 +++ b/src/util/certificate.tsx
-@@ -26,7 +26,7 @@ const details = [
+@@ -30,7 +30,7 @@ const details = [
    },
    {
      name: "organizationName",
--    value: `LXD UI ${location.hostname} (Browser Generated)`,
-+    value: `Incus UI ${location.hostname} (Browser Generated)`,
+-    value: sanitizeOrgName(`LXD UI ${location.hostname} (Browser Generated)`),
++    value: sanitizeOrgName(`Incus UI ${location.hostname} (Browser Generated)`),
    },
  ];
  
-@@ -51,7 +51,7 @@ const generateCert = (password: string) => {
+@@ -55,7 +55,7 @@ const generateCert = (password: string) => {
    const asn1 = forge.pkcs12.toPkcs12Asn1(keys.privateKey, [cert], password, {
      algorithm: "3des", // would like to use aes, but macOS keychain only supports 3des
      generateLocalKeyId: true,

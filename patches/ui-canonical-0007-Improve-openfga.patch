@@ -1,7 +1,7 @@
-From 22fc5a8ae2726d0f3dfdbef2f1e228f7dcd3162f Mon Sep 17 00:00:00 2001
+From c2793800b63bf4180015e1125a5ba6f1a824bed2 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Thu, 28 Mar 2024 15:54:43 +0000
-Subject: [PATCH 7/8] Improve OpenFGA support
+Subject: [PATCH 07/13] Improve OpenFGA support
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -15,10 +15,10 @@ Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/util/helpers.tsx b/src/util/helpers.tsx
-index 2825a67..a5e8680 100644
+index 9dd1078..720549f 100644
 --- a/src/util/helpers.tsx
 +++ b/src/util/helpers.tsx
-@@ -171,7 +171,7 @@ export const checkDuplicateName = (
+@@ -169,7 +169,7 @@ export const checkDuplicateName = (
    const signal = deduplicateController.signal;
    return fetch(`/1.0/${target}/${candidate}?project=${project}`, {
      signal,

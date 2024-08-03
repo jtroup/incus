@@ -1,7 +1,7 @@
-From a8ffa74e0da8a565020fb1ebebd58f23235f19ff Mon Sep 17 00:00:00 2001
+From 4b787cd0c6ea1061c7af55526be93b20c0494af2 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 22:59:56 +0000
-Subject: [PATCH 1/8] Branding
+Subject: [PATCH 01/13] Branding
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -23,7 +23,7 @@ Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
  delete mode 100644 public/assets/img/lxd-logo.svg
 
 diff --git a/index.html b/index.html
-index 6aa1283..85b46bd 100644
+index 7f61cbd..90a41d1 100644
 --- a/index.html
 +++ b/index.html
 @@ -5,7 +5,7 @@
@@ -33,8 +33,8 @@ index 6aa1283..85b46bd 100644
 -    <title>LXD UI</title>
 +    <title>Incus UI</title>
      <link rel="shortcut icon" href="/assets/img/favicon-32x32.png" type="image/x-icon">
- 
-     <script>const global = globalThis;</script>
+     <link rel="manifest" href="/manifest.json" id="manifest">
+     <script src="/ui/assets/js/manifest.js"></script>
 diff --git a/public/assets/img/favicon-32x32.png b/public/assets/img/favicon-32x32.png
 index c7f11279c574e84fd9f8ee473c471a57f36c6b60..1d487b40cf5f55c824c7cecc206563738b7380d8 100644
 GIT binary patch
@@ -345,7 +345,7 @@ index 21254c8..f6da7f9 100644
    @extend %icon;
    @include vf-icon-info-coloured-themed;
 diff --git a/src/sass/_pattern_navigation.scss b/src/sass/_pattern_navigation.scss
-index 92236ef..1373ab0 100644
+index 56a8015..815de2e 100644
 --- a/src/sass/_pattern_navigation.scss
 +++ b/src/sass/_pattern_navigation.scss
 @@ -5,20 +5,20 @@
@@ -382,7 +382,7 @@ index 92236ef..1373ab0 100644
    }
  }
 diff --git a/src/sass/styles.scss b/src/sass/styles.scss
-index 34d155d..1f37774 100644
+index 43c6475..819d5f6 100644
 --- a/src/sass/styles.scss
 +++ b/src/sass/styles.scss
 @@ -4,7 +4,6 @@
@@ -393,7 +393,7 @@ index 34d155d..1f37774 100644
  @include vf-p-icon-add-canvas;
  @include vf-p-icon-applications;
  @include vf-p-icon-begin-downloading;
-@@ -148,10 +147,6 @@ body {
+@@ -157,10 +156,6 @@ body {
    @include vf-icon-external-link($color-link);
  }
  
