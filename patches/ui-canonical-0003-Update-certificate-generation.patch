@@ -1,12 +1,13 @@
-From 765a0907b568816d3344a49a2b5e1ba78f50aa89 Mon Sep 17 00:00:00 2001
+From a08552869cad38426cc105921d5493570b6fbaed Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:03:33 +0000
-Subject: [PATCH 03/17] Update certificate generation
+Subject: [PATCH 03/18] Update certificate generation
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+License: GPL-3.0-only (without Canonical CLA)
 ---
  src/pages/login/BrowserImport.tsx       | 18 +++++++++---------
  src/pages/login/CertificateAdd.tsx      |  4 ++--

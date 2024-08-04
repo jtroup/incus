@@ -1,20 +1,22 @@
-From b765ee4d704ecf0968aa17e7e2344ff76454ef3f Mon Sep 17 00:00:00 2001
+From 2eb54f8799a939a0b8c6d5637bc73f982467d79a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Sun, 4 Aug 2024 05:28:49 +0000
-Subject: [PATCH 16/17] Make migration an action
+Subject: [PATCH 16/18] Make migration an action
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+License: GPL-3.0-only (without Canonical CLA)
 ---
  src/api/instances.tsx                         |  6 ++--
  src/pages/instances/MigrateInstanceForm.tsx   | 13 ++++----
  .../actions/InstanceStateActions.tsx          | 23 +++++++++----
  .../instances/actions/MigrateInstanceBtn.tsx  | 33 ++++++++-----------
  .../instances/forms/EditInstanceDetails.tsx   | 13 --------
+ src/sass/styles.scss                          |  2 +-
  src/util/instanceTable.tsx                    |  2 +-
- 6 files changed, 41 insertions(+), 49 deletions(-)
+ 7 files changed, 42 insertions(+), 50 deletions(-)
 
 diff --git a/src/api/instances.tsx b/src/api/instances.tsx
 index 13cc0e4..a931b59 100644
@@ -266,6 +268,19 @@ index 8f28ec8..44b09f2 100644
          </Row>
        )}
        <ProfileSelect
+diff --git a/src/sass/styles.scss b/src/sass/styles.scss
+index 64d6627..a6cc61b 100644
+--- a/src/sass/styles.scss
++++ b/src/sass/styles.scss
+@@ -159,7 +159,7 @@ body {
+ 
+ .actions-list {
+   display: inline-block;
+-  min-width: 8.5rem;
++  min-width: 6.5rem;
+ 
+   .p-inline-list__item {
+     margin-right: 0;
 diff --git a/src/util/instanceTable.tsx b/src/util/instanceTable.tsx
 index 9e2050d..f7b3db1 100644
 --- a/src/util/instanceTable.tsx
