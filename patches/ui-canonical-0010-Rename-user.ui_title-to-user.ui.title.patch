@@ -1,7 +1,10 @@
-From 00d94a1816c56d81ebd6e6dfd1456e94cf62bf7f Mon Sep 17 00:00:00 2001
+From e58d2da2232157f1b8769c8337597454db6dfd4f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Fri, 2 Aug 2024 18:48:03 +0000
-Subject: [PATCH 10/16] Rename user.ui_title to user.ui.title
+Subject: [PATCH 10/17] Rename user.ui_title to user.ui.title
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---

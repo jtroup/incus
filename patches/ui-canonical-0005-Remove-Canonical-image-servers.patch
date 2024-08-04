@@ -1,7 +1,7 @@
-From d48c5b947da745fb46ba71e65a857ee8174e1065 Mon Sep 17 00:00:00 2001
+From 21be6093a6a831d6b0ab45133820a52938153d90 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:16:13 +0000
-Subject: [PATCH 05/16] Remove Canonical image servers
+Subject: [PATCH 05/17] Remove Canonical image servers
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

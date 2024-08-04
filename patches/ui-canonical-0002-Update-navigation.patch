@@ -1,7 +1,7 @@
-From 8f26e2794052e69090302e6a67531254edd88f65 Mon Sep 17 00:00:00 2001
+From 60c4e6cd660819c13dbe5932ff87635aaa028ae7 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:02:27 +0000
-Subject: [PATCH 02/16] Update navigation
+Subject: [PATCH 02/17] Update navigation
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

@@ -1,7 +1,10 @@
-From 7424e919bfe3a0719515b59407cdddf4eb8148f0 Mon Sep 17 00:00:00 2001
+From 109b83691ac9835a0d676d0bb3901a76d040a1e1 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Sun, 4 Aug 2024 04:07:45 +0000
-Subject: [PATCH 15/16] Add optional location column
+Subject: [PATCH 15/17] Add optional location column
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---
