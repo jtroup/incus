@@ -1,7 +1,7 @@
-From d0c579d1df59008512dcc69c06cdbd050438bf4a Mon Sep 17 00:00:00 2001
+From e435ed400ac683bc072b0555776029e9db66c958 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:12:29 +0000
-Subject: [PATCH 04/16] Remove external links
+Subject: [PATCH 04/17] Remove external links
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

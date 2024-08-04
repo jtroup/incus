@@ -1,7 +1,10 @@
-From 347c83c86bff226b09c181960d0fd8c2db173742 Mon Sep 17 00:00:00 2001
+From b765ee4d704ecf0968aa17e7e2344ff76454ef3f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Sun, 4 Aug 2024 05:28:49 +0000
-Subject: [PATCH 16/16] Make migration an action
+Subject: [PATCH 16/17] Make migration an action
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---
