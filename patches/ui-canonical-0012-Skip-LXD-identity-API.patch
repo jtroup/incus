@@ -1,12 +1,13 @@
-From aa400232f3782e653411578be843317d9530c582 Mon Sep 17 00:00:00 2001
+From 4b6001a481732a80c34eaf3d1e4dc5264200667a Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Sat, 3 Aug 2024 04:06:54 +0000
-Subject: [PATCH 12/17] Skip LXD identity API
+Subject: [PATCH 12/18] Skip LXD identity API
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+License: GPL-3.0-only (without Canonical CLA)
 ---
  src/components/Navigation.tsx   | 2 +-
  src/context/useLoggedInUser.tsx | 9 +--------

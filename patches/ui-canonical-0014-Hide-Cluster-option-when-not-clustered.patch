@@ -1,12 +1,13 @@
-From e544e4cb5f61a09504fb13cd0053a202fa13125f Mon Sep 17 00:00:00 2001
+From 24af9a79ab3b030e80eff0e6ed8bc4bdc10c60b0 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Sun, 4 Aug 2024 03:54:21 +0000
-Subject: [PATCH 14/17] Hide Cluster option when not clustered
+Subject: [PATCH 14/18] Hide Cluster option when not clustered
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+License: GPL-3.0-only (without Canonical CLA)
 ---
  src/components/Navigation.tsx | 8 ++++++++
  1 file changed, 8 insertions(+)
