@@ -586,6 +586,22 @@ jobs:
           git cherry-pick a277d933a1bfafd5e198a18887b1dd8c49fd92d9  # incusd/instance/qemu: Remove double lifecycle event
           git cherry-pick b0622c5d3bf6cc60f5a8ecc9847688ded8401dd9  # tests/clustering: Use correct target project argument
           git cherry-pick dd47cb8bfca95da26767e62e24bdc04d4e4aa8c9  # incusd/isntance/edk2: Fix CSM handling
+          git cherry-pick c687ed61fb26eefea0de54399a68252d5def1e63  # incusd/storage/zfs: Always call tryGetVolumeDiskPathFromDataset
+          git cherry-pick 9d7cdeb956cb3982379e124822dc24fd9635f98e  # incusd/network/ovn: Require functional uplink
+          git cherry-pick 5d2c563e9f1625019088f6f6685a3e5b8c9c8264  # doc: add colima instructions
+          git cherry-pick a191a62e8f6ee32eab9a55cb6e74be5f837d00a4  # doc: Update incus_alias.md
+          git cherry-pick 3ddb5d86b8f7894248782a06c0e170153168b5a3  # incus/network/load_balancer: Fix example
+          git cherry-pick 3d1ff2da78e6129f1853b9585a86f03be2c377a9  # i18n: Update translation templates
+          git cherry-pick 3c865cc7b568bfcb9425a8d9ab105bdf37150cb0  # incusd/network/ovn: Fix crash on uninitialized external IDs
+          git cherry-pick fe8fa44e77430c7d28627dd6e8cdad2302f6719d  # doc/instances: Add VM agent install instructions
+          git cherry-pick b4f27e3041dc8ce8e6b212ee8caba9c2ad71bb9e  # shared/api: Add Config to ServerUntrusted
+          git cherry-pick 59289d3c126d367f4c098a376d40c82234920d5a  # doc/rest-api: Refresh swagger YAML
+          git cherry-pick 89aade9256c24191eb2bfa15cfb4917d19fbd199  # incusd/api_1.0: Expose user.ui config keys to all clients
+          git cherry-pick 5fc4448d90ac6222b47dc0c2beaf487429f5ceb4  # doc/server: Mention user.ui config keys
+          git cherry-pick c1d0849983f81caebf8a4c6432f63cdb0d198ff1  # incusd/auth/oidc: Better handle logout
+          git cherry-pick 3fe3417c001f064d646c486fd595959d19343ec8  # incusd/networks: Emit lifecycle event and authz entries for OVN networks
+          git cherry-pick 7eea07763d15eedd26d2af88f52a85fc6953d3f1  # incusd/network/ovn: Fix indent
+          git cherry-pick 2091a1a3ebbba83b5e0c0e7d61dcff0d3ede4384  # doc/storage_volume: Fix snapshot command
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
