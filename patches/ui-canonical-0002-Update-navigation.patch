@@ -1,12 +1,13 @@
-From 60c4e6cd660819c13dbe5932ff87635aaa028ae7 Mon Sep 17 00:00:00 2001
+From ac936155d74c045f8407d07cba39d3430045878c Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:02:27 +0000
-Subject: [PATCH 02/17] Update navigation
+Subject: [PATCH 02/18] Update navigation
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+License: GPL-3.0-only (without Canonical CLA)
 ---
  src/components/Navigation.tsx | 4 ++--
  src/components/NoMatch.tsx    | 2 +-

@@ -1,12 +1,13 @@
-From e58d2da2232157f1b8769c8337597454db6dfd4f Mon Sep 17 00:00:00 2001
+From 89157d970860c6d7fe26d1063054c387a079fa69 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Fri, 2 Aug 2024 18:48:03 +0000
-Subject: [PATCH 10/17] Rename user.ui_title to user.ui.title
+Subject: [PATCH 10/18] Rename user.ui_title to user.ui.title
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+License: GPL-3.0-only (without Canonical CLA)
 ---
  src/pages/settings/Settings.tsx | 2 +-
  src/util/title.tsx              | 2 +-
