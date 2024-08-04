@@ -628,13 +628,18 @@ jobs:
           git am "${REPO}/patches/ui-canonical-0004-Remove-external-links.patch"
           git am "${REPO}/patches/ui-canonical-0005-Remove-Canonical-image-servers.patch"
           git am "${REPO}/patches/ui-canonical-0006-Remove-version-check.patch"
-          git am "${REPO}/patches/ui-canonical-0007-Improve-openfga.patch"
+          git am "${REPO}/patches/ui-canonical-0007-Improve-OpenFGA-support.patch"
           git am "${REPO}/patches/ui-canonical-0008-Update-keys-that-aren-t-VM-specific.patch"
           git am "${REPO}/patches/ui-canonical-0009-Fix-cluster-evacuation.patch"
           git am "${REPO}/patches/ui-canonical-0010-Rename-user.ui_title-to-user.ui.title.patch"
           git am "${REPO}/patches/ui-canonical-0011-Add-user.uid.sso_only.patch"
           git am "${REPO}/patches/ui-canonical-0012-Skip-LXD-identity-API.patch"
           git am "${REPO}/patches/ui-canonical-0013-Fix-network-forward-count-logic.patch"
+          git am "${REPO}/patches/ui-canonical-0014-Hide-Cluster-option-when-not-clustered.patch"
+          git am "${REPO}/patches/ui-canonical-0015-Add-optional-location-column.patch"
+          git am "${REPO}/patches/ui-canonical-0016-Make-migration-an-action.patch"
+          git am "${REPO}/patches/ui-canonical-0017-Wait-for-projects-list-to-be-loaded.patch"
+          git am "${REPO}/patches/ui-canonical-0018-Respect-image-profile-list.patch"
           sed -i -f "${REPO}/patches/ui-canonical-renames.sed" src/*/*.ts* src/*/*/*.ts* src/*/*/*/*.ts* src/*/*/*/*/*.ts*
 
           npm install yarn --global
