@@ -1,7 +1,7 @@
-From 871d334a7d265b62c40c1b3cb33c86373511eb7d Mon Sep 17 00:00:00 2001
+From 95f9889f86ee5ebd683f43c9855ebc5bd8219799 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 23:03:33 +0000
-Subject: [PATCH 03/13] Update certificate generation
+Subject: [PATCH 03/16] Update certificate generation
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit

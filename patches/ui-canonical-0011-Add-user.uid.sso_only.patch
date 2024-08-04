@@ -1,7 +1,7 @@
-From 087b8d0e18507b040a4ae88922495eb31c0ba500 Mon Sep 17 00:00:00 2001
+From efceb15218d3cfd8e22705507162842317993bfb Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Fri, 2 Aug 2024 19:09:01 +0000
-Subject: [PATCH 11/13] Add user.uid.sso_only
+Subject: [PATCH 11/16] Add user.uid.sso_only
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---

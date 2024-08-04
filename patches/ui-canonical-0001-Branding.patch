@@ -1,7 +1,7 @@
-From 4b787cd0c6ea1061c7af55526be93b20c0494af2 Mon Sep 17 00:00:00 2001
+From 2fddea625f974a04eaa9f6089afab72a2eaae0e7 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Wed, 22 Nov 2023 22:59:56 +0000
-Subject: [PATCH 01/13] Branding
+Subject: [PATCH 01/16] Branding
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -14,11 +14,10 @@ Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
  public/assets/img/lxd-logo.svg      |  34 --------
  src/components/Logo.tsx             |   6 +-
  src/pages/login/Login.tsx           |   1 -
- src/sass/_pattern_icon.scss         |  11 ---
  src/sass/_pattern_navigation.scss   |   8 +-
- src/sass/styles.scss                |   5 --
+ src/sass/styles.scss                |   4 -
  src/util/title.tsx                  |   2 +-
- 10 files changed, 138 insertions(+), 60 deletions(-)
+ 9 files changed, 138 insertions(+), 48 deletions(-)
  create mode 100644 public/assets/img/incus-logo.svg
  delete mode 100644 public/assets/img/lxd-logo.svg
 
@@ -325,25 +324,6 @@ index c283cd5..9307844 100644
          <h1 className="p-heading--4 u-sv-2">Login</h1>
          {hasOidc && (
            <>
-diff --git a/src/sass/_pattern_icon.scss b/src/sass/_pattern_icon.scss
-index 21254c8..f6da7f9 100644
---- a/src/sass/_pattern_icon.scss
-+++ b/src/sass/_pattern_icon.scss
-@@ -1,14 +1,3 @@
--@mixin lxdui-icon-sidebar-collapse() {
--  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' width='16px' height='16px' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 0 7.743 L 6.742 14.485 L 7.899 13.329 L 2.311 7.743 L 7.899 2.157 L 6.742 1 L 0 7.743 Z M 7.899 7.743 L 14.642 14.485 L 15.797 13.329 L 10.21 7.743 L 15.797 2.157 L 14.642 1 L 7.899 7.743 Z' fill='%23FFF' style=''/%3E%3C/svg%3E");
--}
--
--@mixin lxdui-p-icon {
--  .p-icon--sidebar-toggle {
--    @extend %icon;
--    @include lxdui-icon-sidebar-collapse;
--  }
--}
--
- .p-icon--info--notification {
-   @extend %icon;
-   @include vf-icon-info-coloured-themed;
 diff --git a/src/sass/_pattern_navigation.scss b/src/sass/_pattern_navigation.scss
 index 56a8015..815de2e 100644
 --- a/src/sass/_pattern_navigation.scss
@@ -382,18 +362,10 @@ index 56a8015..815de2e 100644
    }
  }
 diff --git a/src/sass/styles.scss b/src/sass/styles.scss
-index 43c6475..819d5f6 100644
+index 43c6475..64d6627 100644
 --- a/src/sass/styles.scss
 +++ b/src/sass/styles.scss
-@@ -4,7 +4,6 @@
- @import "vanilla-framework/scss/build";
- @import "./breakpoints";
- @import "pattern_icon";
--@include lxdui-p-icon;
- @include vf-p-icon-add-canvas;
- @include vf-p-icon-applications;
- @include vf-p-icon-begin-downloading;
-@@ -157,10 +156,6 @@ body {
+@@ -157,10 +157,6 @@ body {
    @include vf-icon-external-link($color-link);
  }
  

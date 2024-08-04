@@ -1,7 +1,7 @@
-From 548e6f36f1d7aa904ac3ab82c5ca3027181825dd Mon Sep 17 00:00:00 2001
+From efe169509dd14b68b295dda2b9254dc515608d27 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Sat, 3 Aug 2024 04:06:54 +0000
-Subject: [PATCH 12/13] Skip LXD identity API
+Subject: [PATCH 12/16] Skip LXD identity API
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---
