@@ -1,7 +1,7 @@
-From 43731618691bc69cbdaccedf838a52b27e6ae10a Mon Sep 17 00:00:00 2001
+From 00d94a1816c56d81ebd6e6dfd1456e94cf62bf7f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Fri, 2 Aug 2024 18:48:03 +0000
-Subject: [PATCH 10/13] Rename user.ui_title to user.ui.title
+Subject: [PATCH 10/16] Rename user.ui_title to user.ui.title
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---

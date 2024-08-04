@@ -1,7 +1,7 @@
-From 124daebf29acfce8d4a1240fbae72ae0ce02ceec Mon Sep 17 00:00:00 2001
+From 7bca3442b49580eeba8cd62673dacb14867b6660 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Fri, 2 Aug 2024 18:42:11 +0000
-Subject: [PATCH 09/13] Fix cluster evacuation
+Subject: [PATCH 09/16] Fix cluster evacuation
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---
