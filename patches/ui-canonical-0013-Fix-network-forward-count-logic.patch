@@ -1,7 +1,7 @@
-From 565644426f2e26f2c70242516a7081e875633205 Mon Sep 17 00:00:00 2001
+From fc05fcca437fa946a67a2863b932e6ec558f6f26 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Sat, 3 Aug 2024 04:55:42 +0000
-Subject: [PATCH 13/13] Fix network forward count logic
+Subject: [PATCH 13/16] Fix network forward count logic
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---
