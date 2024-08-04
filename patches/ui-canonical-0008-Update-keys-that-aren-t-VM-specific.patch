@@ -1,7 +1,10 @@
-From af60b321aeb49c917d13ceacf500ad8fffd8778b Mon Sep 17 00:00:00 2001
+From b94d7684ba5d5cf5892ea7f4c0933e0775fa0b61 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Fri, 2 Aug 2024 18:29:19 +0000
-Subject: [PATCH 08/16] Update keys that aren't VM specific
+Subject: [PATCH 08/17] Update keys that aren't VM specific
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---

@@ -1,7 +1,10 @@
-From efceb15218d3cfd8e22705507162842317993bfb Mon Sep 17 00:00:00 2001
+From 48d53c5acebb997ea753558235e4e35f31734fe8 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
 Date: Fri, 2 Aug 2024 19:09:01 +0000
-Subject: [PATCH 11/16] Add user.uid.sso_only
+Subject: [PATCH 11/17] Add user.uid.sso_only
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
 
 Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
 ---
