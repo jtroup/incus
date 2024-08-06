@@ -602,6 +602,31 @@ jobs:
           git cherry-pick 3fe3417c001f064d646c486fd595959d19343ec8  # incusd/networks: Emit lifecycle event and authz entries for OVN networks
           git cherry-pick 7eea07763d15eedd26d2af88f52a85fc6953d3f1  # incusd/network/ovn: Fix indent
           git cherry-pick 2091a1a3ebbba83b5e0c0e7d61dcff0d3ede4384  # doc/storage_volume: Fix snapshot command
+          git cherry-pick 7b15d2e5f6d8f4f68b012e4c30015d25a7647757  # shared/api: Add EventLifecycleInstanceMigrated
+          git cherry-pick 345fdc12bf57d26f45ba0b851aae84a63e9dcd40  # shared/api: Sort lifecycle events
+          git cherry-pick dd19fa95202e2a93b173d6463cedcda943620c20  # incusd/lifecycle: Add InstanceMigrated
+          git cherry-pick 1d8cd983677f6ee0fea53be43c328221b2eb3e54  # incusd/lifecycle: Sort lifecycle events
+          git cherry-pick d5d5e0b80b11df60eb5450d79d31216814377848  # incusd/isntance/operationlock: Add ActionMigrate
+          git cherry-pick 9c4fef2bad9a02ae94ae3559421fdd843c35948f  # incusd/instance/common: Add support for migration operation
+          git cherry-pick a8ebc0b41ac9494a7e5341012ef0f1df8e249efc  # incusd/instance/qemu: Add support for migration operation and lifecycle
+          git cherry-pick cab076397481689bbb0e95fb9e5bcd8e111f0c3f  # incusd/instance/lxc: Add support for migration operation and lifecycle
+          git cherry-pick e803b0ac4848c2d9861f59c9221b8522b42e91f0  # shared/api: Add lifecycle events for cluster evacuation and healing
+          git cherry-pick 9b53ed7de7a56c4a1ff4b743829c4abae8c5f113  # incusd/lifecycle: Add lifecycle events for cluster evacuation and healing
+          git cherry-pick 438f4248ada84005bf699a9a5aa1122b9f8ef15e  # incusd/cluster: Add lifecycle events for evacuation
+          git cherry-pick b6356f8e2098f83c686c0a58b88d87fd7af1e1f5  # incusd/request: Strip port from event address
+          git cherry-pick 2811cbdcf089ec52d5ac61b5a99da77aafdb9db3  # incusd/instance: Properly link instance and operation
+          git cherry-pick ce275a4735021d817a6bacdd93c9edb8195ae7cc  # incusd/operations: Add CopyRequestor for nested operations
+          git cherry-pick ae7fd874689b56df885664c052390ef59439ba9e  # incusd/instance: Track operation during exec/console
+          git cherry-pick b9006bd1aaddc23642406587a22467e88913d6e0  # doc/clustering: Better document healing
+          git cherry-pick 61bfb13af11b8031b1ab3fa79923ce0dcc8318f4  # incusd/instance: Track operation during creation
+          git cherry-pick fd621c3eb22501760174cdf262fdb151a7596b16  # incusd/instance: Track operation during deletion
+          git cherry-pick fb26d616930d6868626a8801fbd2f14b0fb68002  # incusd/instance: Keep track of API operations
+          git cherry-pick 2ba57b1b7976718f664d45078fb7bfe96b5973b1  # incusd/instance: Set operations on snapshot
+          git cherry-pick af106e12c5f9ba59f5785a613446b2af754689f0  # incus-migrate: Properly handle projects
+          git cherry-pick 626ff5229b749f52fdb7efd104aabaa144ce1d9f  # incusd/apparmor: Allow mounting zfs when delegation is supported
+          git cherry-pick 301c36eeb44036ccca57b75b256fa4b827714525  # doc/clustering: Add howto on cluster access
+          git cherry-pick bfbb712cb74d7ee5d99ab75352db5928a62de215  # cmd/incusd: Set keep-alive timeout
+          git cherry-pick 112af836365c79c5aa7a100f65ffd12c3a2e02bb  # incusd/auth/oidc: Handle cases where we can't set cookies
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
