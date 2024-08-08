@@ -627,6 +627,12 @@ jobs:
           git cherry-pick 301c36eeb44036ccca57b75b256fa4b827714525  # doc/clustering: Add howto on cluster access
           git cherry-pick bfbb712cb74d7ee5d99ab75352db5928a62de215  # cmd/incusd: Set keep-alive timeout
           git cherry-pick 112af836365c79c5aa7a100f65ffd12c3a2e02bb  # incusd/auth/oidc: Handle cases where we can't set cookies
+          git cherry-pick 2d611a29a3f9750a67856b71ea66989ac1501947  # incusd/instance/qemu: Deref ceph config path
+          git cherry-pick 0f35cd586256496e735d8be4eace77baad4896c7  # incusd/apparmor/qemu: Guess ceph config paths
+          git cherry-pick 9151058c8a7d29992bd1c831cd6f42a87dcbec6e  # incusd: Switch OVN to a getter function
+          git cherry-pick e05556493733d9498d5110fd0912e265436d4c42  # incusd/network: Port to new OVN state function
+          git cherry-pick 624c100a19c7eb878203e56bcd94b97ddd1167d9  # incusd/storage/lvm: Re-try activation/deactivation
+          git cherry-pick fb84a5862c83dd4014ba9af7521c9bd8b3b598c3  # incusd/storage/lvm: Don't activate volumes during cold migration
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
