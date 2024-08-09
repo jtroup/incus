@@ -1,0 +1,37 @@
+From fd2fd86562ed770188259e262fd5b610fbbd5f04 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?St=C3=A9phane=20Graber?= <stgraber@stgraber.org>
+Date: Fri, 9 Aug 2024 05:14:57 +0000
+Subject: [PATCH 19/19] Add support for LVM Cluster
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Stéphane Graber <stgraber@stgraber.org>
+License: GPL-3.0-only (without Canonical CLA)
+---
+ src/util/storageOptions.tsx | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/util/storageOptions.tsx b/src/util/storageOptions.tsx
+index 29298ed..4bc4ae5 100644
+--- a/src/util/storageOptions.tsx
++++ b/src/util/storageOptions.tsx
+@@ -7,6 +7,7 @@ export const lvmDriver = "lvm";
+ export const zfsDriver = "zfs";
+ export const cephDriver = "ceph";
+ export const powerFlex = "powerflex";
++export const lvmClusterDriver = "lvmcluster";
+ 
+ const storageDriverLabels: { [key: string]: string } = {
+   [dirDriver]: "Directory",
+@@ -15,6 +16,7 @@ const storageDriverLabels: { [key: string]: string } = {
+   [zfsDriver]: "ZFS",
+   [cephDriver]: "Ceph",
+   [powerFlex]: "Dell PowerFlex",
++  [lvmClusterDriver]: "LVM Cluster",
+ };
+ 
+ export const getStorageDriverOptions = (
+-- 
+2.34.1
+
