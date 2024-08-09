@@ -366,6 +366,7 @@ jobs:
           git am "${REPO}/patches/ui-canonical-0016-Make-migration-an-action.patch"
           git am "${REPO}/patches/ui-canonical-0017-Wait-for-projects-list-to-be-loaded.patch"
           git am "${REPO}/patches/ui-canonical-0018-Respect-image-profile-list.patch"
+          git am "${REPO}/patches/ui-canonical-0019-Add-support-for-LVM-Cluster.patch"
           sed -i -f "${REPO}/patches/ui-canonical-renames.sed" src/*/*.ts* src/*/*/*.ts* src/*/*/*/*.ts* src/*/*/*/*/*.ts*
 
           npm install yarn --global
