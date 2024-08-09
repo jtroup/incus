@@ -46,7 +46,7 @@ jobs:
       PATH: "/opt/incus/bin:/root/.cargo/bin:/usr/local/go/bin:/usr/local/node/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
       LXC_TAG: "v6.0.1"
       LXCFS_TAG: "v6.0.1"
-      INCUS_TAG: "v6.3.0"
+      INCUS_TAG: "v6.4.0"
       INCUS_UI_CANONICAL_TAG: "0.12"
       RAFT_TAG: "v0.22.1"
       COWSQL_TAG: "v1.15.6"
@@ -311,19 +311,6 @@ jobs:
           REPO="${PWD}"
 
           cd /build/incus
-
-          git cherry-pick 6eb6f74b57f77d321c332f25f97d72ea29c71ebe  # incus-simplestreams: Fix split images
-          git cherry-pick cc33d436d193f12a38818482c050fafd1ecae04c  # incusd/instance/edk2: Support OVMF filenames on arm64
-          git cherry-pick ee24c49a275268f08f9dd060fba1256699fee65e  # incusd/instance/drivers/qemu: Limit CPU flag calculation to x86_64
-          git cherry-pick a68ebef36cdada61bd5ece7e15c82ee449214e9f  # incusd/instance/qemu: Fix architecture check being backward
-          git cherry-pick 5c01e21a85fa67fcf91ea0b9f5f0125a4ef177c9  # client/oci: Add errors for missing umoci
-          git cherry-pick 987bd27c20b4c8dd9575aa2254c865847fd73026  # client/oci: Add errors for missing skopeo
-          git cherry-pick 091a87835262b512c42283dc9afa3f4c5b0413e3  # incusd/instance: Fix initial configuration handling for OCI
-          git cherry-pick 5d8b9c88a61719855b3901781ac9ef8ac8901d42  # incusd/instance/lxc: Handle OCI containers using real PID1
-          git cherry-pick 56e6c1a40c7941f5069edccd050e4c137a4fef51  # incusd/apparmor/qemu: Relax apparmor rules a bit
-          git cherry-pick 3381b08187a9e54b23fff20bdd4be2901cff46cb  # incus-simplestreams: Handle removal of combined images
-          git cherry-pick acb84c6fb1621c6dc2d16b13f2d86898b787d475  # incusd/instance/lxc: Add basic Mounts handling for OCI
-          git cherry-pick ce178160f281aaef0c75125ff02a4dd66cdb128b  # incusd/apparmor/qemu: Fix typo in rule
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
