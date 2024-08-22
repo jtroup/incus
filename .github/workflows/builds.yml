@@ -633,6 +633,41 @@ jobs:
           git cherry-pick e05556493733d9498d5110fd0912e265436d4c42  # incusd/network: Port to new OVN state function
           git cherry-pick 624c100a19c7eb878203e56bcd94b97ddd1167d9  # incusd/storage/lvm: Re-try activation/deactivation
           git cherry-pick fb84a5862c83dd4014ba9af7521c9bd8b3b598c3  # incusd/storage/lvm: Don't activate volumes during cold migration
+          git cherry-pick 03697552fc6ba3537251e296824967a19eb83b9c  # incusd/network/ovn: Harden deletion logic
+          git cherry-pick 8cfe6ecd664cdfcd0aced359de1f12610639f07e  # client: import examples for docs
+          git cherry-pick 4d1325a5b806998b2447e51a3e094cd318c3083b  # client: name var for docs
+          git cherry-pick 94e173fb8c57bb0e75c02e1395b8bafdc8dfa7b4  # client: alias & server/procotol default for docs
+          git cherry-pick 0eed1c46692a9557c032055888bbfff97250fef5  # incusd/instance: Fix backup file locking issue
+          git cherry-pick 368b04fb1fd562c79883a8fcbcdbb012d40c561a  # incusd/device/pci: Allow hotplug
+          git cherry-pick 9c90081f314ac680b7205b45879690f4f22d9f7e  # incusd/instance/qmp: Add CheckPCIDevice
+          git cherry-pick 96c2ebb4170eea3020f6d95ecc4e49fe4df850b4  # incusd/instance/qemu: Use monitor.CheckPCIDevice
+          git cherry-pick d52b76c88bf05eac8a05320406a7de10a2af8521  # incusd/instance/qemu: Tweak comments on deviceStart
+          git cherry-pick 3dc3c0b77caca28b5cc15e627a9138f05a34c2b9  # incusd/instance/qemu: Add hotplug support for generic PCI
+          git cherry-pick 0fa06a66f0910d924eb42f6f2510efb1c5c392d6  # client: fix typo in example
+          git cherry-pick 7d9c22a594b33e65cb1d3fa8895b603540960b19  # doc: Update incus_alias.md
+          git cherry-pick 2c38b69c6f819c84fa93e36f46d7918decc01335  # incusd/storage/lvm: Fix resize logic to conserve LV state
+          git cherry-pick 50c36308254e4d8dd6006fc467f3550de5f480ee  # incusd/network/ovn: Set missing send_periodic field
+          git cherry-pick de53aadbeee584e48178d965319953614f524f1a  # incusd/profiles: Improve listing performance
+          git cherry-pick 28e7a2ffa2133a7da14dba7efaee1a81b8841381  # incusd/server/db: Increase transaction deadline to 30s
+          git cherry-pick 3317c51dc93234944573fffc9d55ab1955c431c9  # incusd/db/profiles: Support device cache in ToAPI
+          git cherry-pick 9dcbcf701e44f28115988e15b7ae966c57820f23  # incusd: Pass profile device cache to ToAPI calls when possible
+          git cherry-pick d11afa933fa2a9834f550f761dcdd6e24f4ab1a2  # incusd/db/instances: Support device cache to ToAPI
+          git cherry-pick 52b17fc4514d18d0ae3948da9d9cd11f4d863b7a  # incusd: Pass instance device cache to ToAPI calls when possible
+          git cherry-pick c8bafdb0d81f94bc73c4f94be30850b73a96bab8  # incusd/db/instances: Allow passing profile devices to instance ToAPI
+          git cherry-pick 097918908572be5e8a6115844c81aad1b3df0aca  # incusd: Pass profile device cache to instance ToAPI calls when possible
+          git cherry-pick 215928d5a116cf7958787d474d450426b0503bc3  # incusd/instances: Remove old retry logic
+          git cherry-pick 4768636ea4aaaf65a957976d4c14e13415107e75  # incusd/network_integration: Fix typo in doc string
+          git cherry-pick f5c935fbeacd5543404975b15cda0d9aa3bd9bfc  # doc: Update configs
+          git cherry-pick d2ac69f39c5729b05f0b37dcb4dda2a7626a88fa  # incusd/network/ovn: Use stable random for IC gateway chassis priority
+          git cherry-pick 0670af662e18336220cc4528e783d3645391d571  # incusd/storage_volumes_state: Handle unsupported response from drivers
+          git cherry-pick f4990122014140f9beade76f18e23a0c8d3f5cb8  # lxd-to-incus: Handle Incus socket in /run/incus/
+          git cherry-pick a03c02c97ede66e19827bc799120b37444a4105f  # incusd/auth/openfga: Avoid deprecated ApiSchema and ApiHost
+          git cherry-pick 707e24f678ae6d7fadaff9246e5f66ef4655a811  # incusd/auth: Re-organize entitlement list
+          git cherry-pick 8af786585c170b5aeb6155db0d0761db08ad08ec  # incusd/auth/openfga: Sort entries in openfga model
+          git cherry-pick 8a46ba431040f6a83f9724fd4adb8743a29b81e1  # incusd/auth/openfga: Add missing network integration permission
+          git cherry-pick a8e7d846695f7b78988a704ee6f59565e3b9d7d5  # incusd/auth/openfga: Require admin level to create projects
+          git cherry-pick 635d7e2ff7bcfcd6381f97d18f149f2ff4b9b344  # incusd/auth/openfga: Rebuild model
+          git cherry-pick 157af463ae47d2b707a0147857ed4c5184d562a6  # incusd/auth: Fix network integration object
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
