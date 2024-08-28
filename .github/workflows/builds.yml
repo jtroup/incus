@@ -668,6 +668,23 @@ jobs:
           git cherry-pick a8e7d846695f7b78988a704ee6f59565e3b9d7d5  # incusd/auth/openfga: Require admin level to create projects
           git cherry-pick 635d7e2ff7bcfcd6381f97d18f149f2ff4b9b344  # incusd/auth/openfga: Rebuild model
           git cherry-pick 157af463ae47d2b707a0147857ed4c5184d562a6  # incusd/auth: Fix network integration object
+          git cherry-pick e52ebba251077e87d61f6b1d3350f6def99adab1  # Change Cloud Init "user" to "users"
+          git cherry-pick 4edbbd716954af849ab4d1bafc8466e0ed661a82  # shared/api: Fix incorrect struct naming for volume backups
+          git cherry-pick 2b8a5629314713bd1ba7bc51378b14390db4cb01  # client: Update for fixed volume backup structs
+          git cherry-pick 65bbd2ac75ba320be88bd5e7cd41b06383bc5c39  # incus: Update for fixed volume backup structs
+          git cherry-pick 8832f139f07e3214c9addc2280f69ad07ef2aa47  # incusd: Update for fixed volume backup structs
+          git cherry-pick 5bc7113ab6595f7fc1df4423280f4ddbeda461ca  # incusd/storage_volume_backup: Fix swagger references
+          git cherry-pick 84666166f52a47d2adc0c9708b36304fe53ecea9  # incusd/storage_bucket_backup: Fix swagger references
+          git cherry-pick a2d5c0bb016931a07943cf610b23237241ce9a13  # doc/rest-api: Refresh swagger YAML
+          git cherry-pick d8d51e17434fd42f13e973576db82f99769c9590  # incusd/device/nic: Make burst rate dynamic for ingress traffic
+          git cherry-pick 00ad7c04396bcdd09196679344a8294ff6069ca7  # incusd/storage/lvm: Allow live resize
+          git cherry-pick 9e49bea3f4b09ae4f44ab5e3e4c2eb2d691b4ae8  # incusd/storage/zfs: Allow online resize of ZFS block volumes
+          git cherry-pick 1bfac9494d773cdfdc9363f74ff1e4c657c0e34b  # incusd/device/disk: Add callback on resize
+          git cherry-pick af7d85c68d95e7829a05b53e5ec2cd05dba586bf  # incusd/instance/drivers/qmp: Add resize handling
+          git cherry-pick b50b9d851093ef186ac317b116ddf4fa4187eb2a  # incusd/instance/qemu: Add disk resize handling
+          git cherry-pick 08a98a36bae8232aa3b828fbffe23bd2dcec5d67  # incusd/network/ovn: Limit MAC_Binding explosion
+          git cherry-pick 3edd5cf49777c8161905b0999a4e048071416ee5  # incusd/network/ovn: Add ARP limits to updated routers
+          git cherry-pick 977190e009b1bd15dedf7978d05dadf5f172c740  # incusd/network/ovn: Wait a bit longer for northd to allocate addresses
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
