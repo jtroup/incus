@@ -685,6 +685,20 @@ jobs:
           git cherry-pick 08a98a36bae8232aa3b828fbffe23bd2dcec5d67  # incusd/network/ovn: Limit MAC_Binding explosion
           git cherry-pick 3edd5cf49777c8161905b0999a4e048071416ee5  # incusd/network/ovn: Add ARP limits to updated routers
           git cherry-pick 977190e009b1bd15dedf7978d05dadf5f172c740  # incusd/network/ovn: Wait a bit longer for northd to allocate addresses
+          git cherry-pick 48c80340b7ff6641311e024f1029009959c28d0a  # incusd/apparmor: Don't constantly query the version and cache
+          git cherry-pick d869bf70972f7ffadccf7052f8384918b7be0a2f  # incusd/storage/driver/dir: Don't needlessly re-apply project id on quota changes
+          git cherry-pick 2bd3f955b32678b62374b58207e3af4cb83375e6  # incusd/storage/quota: Don't fail on missing paths
+          git cherry-pick 745b9df75202831f0cf79d9dcd4f54f7d06887e0  # incusd/storage/lvm: Retry setactivation skip for busy environments
+          git cherry-pick c396a6dfacf82e24e1834b2452ecaa535bf74d67  # incusd/instance/drivers/qemu: Fix node name overflow logic
+          git cherry-pick e0493911c619df18a903d6532c44758716a0ee9f  # incusd/instance/drivers/qemu: Add missing node name handling
+          git cherry-pick 61499f21d3601ddff8aa335e7195b73aa326b521  # incusd/api_internal: Add API to notify volume resizes
+          git cherry-pick 3202bf30045b10396e14664e0aff5e6a347d20b2  # incusd/cluster: Fix redirect loop with shared volumes across multiple servers
+          git cherry-pick cf9f8be50d57037f6d189a46c0bdd56b57e3f9f5  # incusd/storage/backend: Notify instances following block custom volume resize
+          git cherry-pick 44a28c1a9b0dbf07d5c4bad5e76cdb498f2b9e0a  # client: Fix error handling in push mode copy
+          git cherry-pick 37a012daf87351485e8bdc6e2b440090b7155472  # incusd/network/ovn: Fix send_periodic syntax
+          git cherry-pick a8f8d3df19df4682e3999455408507c55a24448a  # incusd/project: Validate group names
+          git cherry-pick d05acfcc64807c8b0d17a03bdf87306864129567  # incusd/db: Confirm cluster group validity during placement
+          git cherry-pick 41582f8f24192c9637bec63fa6ddd090fd223bf4  # doc/cluster_group: Mention renaming groups
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
