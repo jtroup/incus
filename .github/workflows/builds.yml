@@ -561,7 +561,7 @@ jobs:
         run: |
           cd /build/qemu
           sed -i "s/^unset target_list$/target_list=\"$(uname -m)-softmmu\"/" configure
-          sed -i 's#libseccomp_minver=".*#libseccomp_minver="0.0"#g' configure
+          sed -i "s/^glib_req_ver = '>=2.66.0'/glib_req_ver = '>=2.64.0'/" meson.build
           ./configure \
                   --prefix=/opt/incus \
                   --libexecdir=bin \
