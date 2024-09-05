@@ -144,6 +144,7 @@ jobs:
             xorriso
 
           pip3 install meson || pip3 install meson --break-system-packages
+          pip3 install tomli
 
       - name: Install backported debhelper (on focal)
         if: ${{ matrix.os == 'ubuntu-20.04' }}
