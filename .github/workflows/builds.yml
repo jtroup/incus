@@ -317,6 +317,12 @@ jobs:
 
           cd /build/incus
 
+          git cherry-pick 0b4ebf48ab3de5692168cb056e90a814d52338ce  # incus/network: Fix capitalization in network list
+          git cherry-pick 622a1487db2a2902816bbd83dd688b1df0bdadb0  # i18n: Update translation templates
+          git cherry-pick b6c1dd079a7e558d01f6e19bea2d61134acbeed7  # incusd/storage/drivers/lvm: Cache VG extent size
+          git cherry-pick 17cba6ecb8900c8fc462e8ab59a1cd509567a91d  # incusd/instance/qemu: Always re-generate the nvram symlink
+          git cherry-pick 86fdc2528a0e3a75b1d3e815e2c119f4e3fdc432  # incusd/network/ovn: LSP dynamic allocation can't be done per protocol
+
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
           go build -o "/opt/incus/bin/incus-benchmark" github.com/lxc/incus/v6/cmd/incus-benchmark
