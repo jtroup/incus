@@ -53,7 +53,7 @@ jobs:
       COWSQL_TAG: "v1.15.6"
       CRIU_TAG: "v3.19"
       EDK2_TAG: "edk2-stable202408"
-      GOLANG_TAG: "go1.23.0"
+      GOLANG_TAG: "go1.23.1"
       LIBTPMS_TAG: "v0.9.6"
       LIBURING_TAG: "liburing-2.7"
       MINIO_TAG: "RELEASE.2024-08-29T01-40-52Z"
