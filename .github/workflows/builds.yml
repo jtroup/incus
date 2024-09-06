@@ -47,7 +47,7 @@ jobs:
       PATH: "/opt/incus/bin:/root/.cargo/bin:/usr/local/go/bin:/usr/local/node/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin:/usr/local/sbin"
       LXC_TAG: "v6.0.1"
       LXCFS_TAG: "v6.0.1"
-      INCUS_TAG: "v6.4.0"
+      INCUS_TAG: "v6.5.0"
       INCUS_UI_CANONICAL_TAG: "0.12"
       RAFT_TAG: "v0.22.1"
       COWSQL_TAG: "v1.15.6"
@@ -316,37 +316,6 @@ jobs:
           REPO="${PWD}"
 
           cd /build/incus
-
-          git cherry-pick 1b6d5d95b7e30d6327a331338666787cf9a27822  # incusd/storage: Fix UsedBy values for sub-directory volumes
-          git cherry-pick 7c92234f5feb4b42d838491689946cb3ed60d929  # incusd/instance: Fix backup file locking issue
-          git cherry-pick b03f050ec964d3264d53b5a4a4e2e592c15f7f6e  # incusd/projects: Don't fail project creation on missing pools
-          git cherry-pick 9e8a12aebe53bc07803a3af7488728f7e640e746  # doc/firewalld: Update Docker link
-          git cherry-pick 3b3bdc6008feb542e048855d89bc64ac0e1bf598  # cmd/incusd: Add hostname to dhcp request
-          git cherry-pick 3518d55d3a9ad8a502388c2b5ffcbbe448b64d23  # doc: Update incus_alias.md
-          git cherry-pick d8fdc55c664e679eeea94670b02e4d926f6350a3  # incusd/storage/lvm: Fix resize logic to conserve LV state
-          git cherry-pick 1a7904d1788793509d32955b86a9c7b111cd9dea  # incusd/network/ovn: Set missing send_periodic field
-          git cherry-pick 029a3f1f4ef506280e268d462451b12bae09ea6f  # incusd/profiles: Improve listing performance
-          git cherry-pick 0fc84c888a1301f7ff3dd8ed956706fefcd0b232  # incusd/server/db: Increase transaction deadline to 30s
-          git cherry-pick edcea63a7604786a9fe5396022f8a5b9cd02560f  # incusd/db/profiles: Support device cache in ToAPI
-          git cherry-pick db2a8cd1d136dc2463775b4066245576b7001fe7  # incusd: Pass profile device cache to ToAPI calls when possible
-          git cherry-pick 3c886fc6b354f4f07a2b8bba1f798092c7084704  # incusd/db/instances: Support device cache to ToAPI
-          git cherry-pick 5d46fd8efdaf27bba1033e08ddc52b07dac8f964  # incusd: Pass instance device cache to ToAPI calls when possible
-          git cherry-pick 38d7c3087c235d59bf194333c766c975b48c6b3c  # incusd/db/instances: Allow passing profile devices to instance ToAPI
-          git cherry-pick caa997d50cb785d3c0489be59e46dd67b80b3880  # incusd: Pass profile device cache to instance ToAPI calls when possible
-          git cherry-pick 7c60b4a520c7554bb4a8103783419ed144e511e1  # incusd/instances: Remove old retry logic
-          git cherry-pick f09eae90d3fbc10269c4dcd1129fe934d378789d  # incusd/network_integration: Fix typo in doc string
-          git cherry-pick 8680caf10059a496a5cf779796c71538cb593fdb  # doc: Update configs
-          git cherry-pick 46639503163e536268b1edf42f05aaec1886e1ce  # incusd/main_forknet: Tweak DHCP client to apply DNS first
-          git cherry-pick 9102e09c1af973c8f2a2f244a43db4a6bd3de31d  # incusd/network/ovn: Use stable random for IC gateway chassis priority
-          git cherry-pick 4f5efd6132a263fe56e98ad1262a70159f8f8934  # incusd/storage_volumes_state: Handle unsupported response from drivers
-          git cherry-pick f54ad5cdcd0fa3648010542bba128bcda0eb5e4e  # lxd-to-incus: Handle Incus socket in /run/incus/
-          git cherry-pick 266d54a224224198a01cd73a581fb51fff1943c8  # incusd/auth/openfga: Avoid deprecated ApiSchema and ApiHost
-          git cherry-pick fffd96ddbc0b48be3a4ce2ea7872494fdc24543f  # incusd/auth: Re-organize entitlement list
-          git cherry-pick 123a32c61af1813c2e5a0010a80d1298680c14cd  # incusd/auth/openfga: Sort entries in openfga model
-          git cherry-pick dc491fc1309e4e8b41a0a9975e49a05dea30050f  # incusd/auth/openfga: Add missing network integration permission
-          git cherry-pick 916316f730cf65dfe9f6f83f140a56e03cedf081  # incusd/auth/openfga: Require admin level to create projects
-          git cherry-pick 5b67ef034afcc1d212d32993565166ef77aeb76b  # incusd/auth/openfga: Rebuild model
-          git cherry-pick aaf076809084dca08aa752ccf378f911ddefbcfa  # incusd/auth: Fix network integration object
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
