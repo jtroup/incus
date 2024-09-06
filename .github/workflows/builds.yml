@@ -200,7 +200,7 @@ jobs:
       - name: Get the code
         run: |
           # Ubuntu 20.04 is no longer supported by recent QEMU.
-          [ "${OS_NAME}" = "ubuntu-20.04" ] && QEMU_TAG="9.0.2"
+          [ "${OS_NAME}" = "ubuntu-20.04" ] && QEMU_TAG="v9.0.2"
 
           git clone https://github.com/axboe/liburing /build/liburing --depth 1 -b "${LIBURING_TAG}"
           git clone https://github.com/cowsql/raft /build/raft --depth 1 -b "${RAFT_TAG}"
