@@ -322,6 +322,16 @@ jobs:
           git cherry-pick b6c1dd079a7e558d01f6e19bea2d61134acbeed7  # incusd/storage/drivers/lvm: Cache VG extent size
           git cherry-pick 17cba6ecb8900c8fc462e8ab59a1cd509567a91d  # incusd/instance/qemu: Always re-generate the nvram symlink
           git cherry-pick 86fdc2528a0e3a75b1d3e815e2c119f4e3fdc432  # incusd/network/ovn: LSP dynamic allocation can't be done per protocol
+          git cherry-pick 572afb06f66f83ca95efa1b9386fceeaa1c9e11b  # incusd/instance/qemu: Set O_DIRECT when passing in FDs
+          git cherry-pick d1f3c43fdda266f4d2cffa27a195fb33d8eae44a  # Translated using Weblate (French)
+          git cherry-pick cf8632cc07ac384b096d62a4e3a82afdb422288d  # incusd/apparmor: Only initialize with the daemon
+          git cherry-pick 0c37b7e3ec65b4d0e166e2127d9f1835320165b8  # incusd/instance/qemu: Make O_DIRECT conditional on directCache
+          git cherry-pick 58eeb4eeee8a9e7f9fa9c62443d00f0ec6797078  # incusd/instance/qemu: Force threads I/O mode for unsafe/writeback
+          git cherry-pick 4acc15c0dcab2fe4c076eb8422bc1215fc5d4d7a  # incusd/instance/qemu: Move away from deprecated fd: syntax
+          git cherry-pick 2684f7993ead016a8ae8579751b80e13f81d511a  # doc: Fix network load-balancer typo
+          git cherry-pick 34d40ab5c7aacf3502979d008a94f270f2de3bb8  # incusd/network/ovn: Fix group of load-balancer config keys
+          git cherry-pick 5f3bb2e9d0d24ca527030cac0d36e384a9d83334  # doc: Update metadata
+          git cherry-pick b77c1ee8aca2da814a534ad45ab21223a0f8faf5  # incusd/apparmor: Add sys_rawio for QEMU 9.1
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
