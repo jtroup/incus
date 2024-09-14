@@ -343,8 +343,10 @@ jobs:
           make doc
           cp -R doc/html /opt/incus/doc
 
-          mkdir -p /opt/incus/share/bash_completion.d/
-          /opt/incus/bin/incus completion bash > /opt/incus/share/bash_completion.d/incus
+          mkdir -p /opt/incus/share/completions/
+          /opt/incus/bin/incus completion bash > /opt/incus/share/completions/bash
+          /opt/incus/bin/incus completion fish > /opt/incus/share/completions/fish
+          /opt/incus/bin/incus completion zsh > /opt/incus/share/completions/zsh
 
       - name: Build UI (canonical)
         run: |
@@ -672,14 +674,20 @@ jobs:
           [ "${PKGOS}" = "ubuntu-22.04" ] && CODENAME=jammy
           [ "${PKGOS}" = "ubuntu-24.04" ] && CODENAME=noble
 
-          mkdir -p pkg/ pkg/lib/systemd/ pkg/opt/ pkg/usr/bin/ pkg/usr/share/bash-completion/completions/
+          mkdir -p pkg/ pkg/lib/systemd/ pkg/opt/ pkg/usr/bin/ \
+            pkg/usr/share/bash-completion/completions/ \
+            pkg/usr/share/fish/vendor_completions.d/ \
+            pkg/usr/share/zsh/vendor-completions/
 
           cp -R debian pkg/debian
           cp bin/* pkg/usr/bin/
           cp -R /opt/incus pkg/opt/
           cp -R etc pkg/etc
           mv pkg/opt/incus/lib/systemd/system pkg/lib/systemd/system
-          ln -s /opt/incus/share/bash_completion.d/incus pkg/usr/share/bash-completion/completions/incus
+
+          ln -s /opt/incus/share/completions/bash pkg/usr/share/bash-completion/completions/incus
+          ln -s /opt/incus/share/completions/fish pkg/usr/share/fish/vendor_completions.d/incus.fish
+          ln -s /opt/incus/share/completions/zsh pkg/usr/share/zsh/vendor-completions/_incus
 
           ln -s /opt/incus/bin/lxd-to-incus pkg/usr/bin/lxd-to-incus
 
