@@ -1,6 +1,8 @@
 usr/bin/incus
 usr/share/bash-completion
+usr/share/fish
 usr/share/locale
+usr/share/zsh
 opt/incus/bin/incus
-opt/incus/share/bash_completion.d
+opt/incus/share/completions
 opt/incus/share/locale

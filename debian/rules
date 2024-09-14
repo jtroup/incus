@@ -24,10 +24,12 @@ override_dh_install:
 	# Handle incus-client
 	rm debian/incus-base/usr/bin/incus
 	rm debian/incus-base/opt/incus/bin/incus
-	rm -R debian/incus-base/opt/incus/share/bash_completion.d
+	rm -R debian/incus-base/opt/incus/share/completions
 	rm -R debian/incus-base/opt/incus/share/locale
 	rm -R debian/incus-base/usr/share/bash-completion
+	rm -R debian/incus-base/usr/share/fish
 	rm -R debian/incus-base/usr/share/locale
+	rm -R debian/incus-base/usr/share/zsh
 
 	# Handle incus-extra
 	rm debian/incus-base/usr/bin/fuidshift
