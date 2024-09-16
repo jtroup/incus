@@ -344,6 +344,7 @@ jobs:
           git cherry-pick ec2a946f6621897462801efcc9a54b141ec8c63a  # i18n: Update translation templates
           git cherry-pick ef9e0bdbb5ce6fa92620af72b27b5d21c14ba6aa  # Added translation using Weblate (Indonesian)
           git cherry-pick c3f84edbe4b7ebe5e4109e82b4173113504dc10b  # scripts: fix empty-incus.sh instances delete
+          git cherry-pick 79c0a4ec8c1b7137bfa95b3ae1d749724816186c  # incusd/network/ovn: Properly handle lack of a protocol on LB checker
 
           go build -o "/opt/incus/bin/fuidshift" github.com/lxc/incus/v6/cmd/fuidshift
           go build -o "/opt/incus/bin/incus" github.com/lxc/incus/v6/cmd/incus
